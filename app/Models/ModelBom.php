@@ -10,6 +10,7 @@ class ModelBom extends Model
     protected $primaryKey = 'id_bom';
     protected $allowedFields = [
         'product_id',
+        'process_step_id',
         'bom_code',
         'bom_version',
         'effective_date',
@@ -21,6 +22,7 @@ class ModelBom extends Model
     {
         $boms = $this->select('boms.*, products.product_name')
             ->join('products', 'products.id_product = boms.product_id')
+            ->join('process_steps', 'process_steps.id_process_step = boms.process_step_id')
             ->orderBy('boms.id_bom', 'DESC')
             ->findAll();
 
@@ -51,5 +53,15 @@ class ModelBom extends Model
     public function Counts()
     {
         return $this->db->table('boms')->countAllResults();
+    }
+
+    public function getByStep($step_id)
+    {
+        return $this->select('boms.*, products.product_name, process_steps.step_name')
+            ->join('products', 'products.id_product = boms.product_id')
+            ->join('process_steps', 'process_steps.id_process_step = boms.process_step_id')
+            ->where('boms.process_step_id', $step_id)
+            ->orderBy('boms.id_bom', 'DESC')
+            ->findAll();
     }
 }

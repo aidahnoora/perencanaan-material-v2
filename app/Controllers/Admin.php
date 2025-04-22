@@ -10,6 +10,11 @@ use App\Models\ModelUser;
 
 class Admin extends BaseController
 {
+    protected $ModelProduk;
+    protected $ModelMaterial;
+    protected $ModelSupplier;
+    protected $ModelUser;
+
     public function __construct()
     {
         $this->ModelProduk = new ModelProduk();

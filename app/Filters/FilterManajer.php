@@ -45,7 +45,7 @@ class FilterManajer implements FilterInterface
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {
         if (session()->get('level') == '2') {
-            return redirect()->to(base_url('Manajer'));
+            return redirect()->to(base_url('Admin'));
         }
     }
 }

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\ModelMaterial;
 use App\Models\ModelPembelian;
+use App\Models\ModelSupplier;
 
 class Pembelian extends BaseController
 {
@@ -12,6 +13,8 @@ class Pembelian extends BaseController
     {
         $this->ModelMaterial = new ModelMaterial();
         $this->ModelPembelian = new ModelPembelian();
+        $this->ModelSupplier = new ModelSupplier();
+
     }
 
     public function index()
@@ -23,6 +26,7 @@ class Pembelian extends BaseController
             'submenu' => '',
             'page' => 'admin/v_pembelian',
             'materials' => $this->ModelMaterial->AllData(),
+            'suppliers' => $this->ModelSupplier->AllData(),
             'inventories' => $this->ModelPembelian->AllData(),
         ];
 
@@ -54,6 +58,7 @@ class Pembelian extends BaseController
             // Simpan data pembelian
             $data = [
                 'material_id' => $material_id,
+                'supplier_id' => $this->request->getPost('supplier_id'),
                 'current_stock' => $current_stock,
                 'allocated_qty' => $this->request->getPost('allocated_qty'),
                 'warehouse_location' => $this->request->getPost('warehouse_location'),
@@ -120,6 +125,7 @@ class Pembelian extends BaseController
             $data = [
                 'id_inventory' => $id_inventory,
                 'material_id' => $material_id,
+                'supplier_id' => $this->request->getPost('supplier_id'),
                 'current_stock' => $current_stock_baru,
                 'allocated_qty' => $this->request->getPost('allocated_qty'),
                 'warehouse_location' => $this->request->getPost('warehouse_location'),

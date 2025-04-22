@@ -137,10 +137,12 @@ class Struktur extends BaseController
                 $stok = $this->ModelMaterial->find($material['material_id']);
 
                 // Gross Requirement → Total kebutuhan material berdasarkan BOM dan jumlah produksi.
+                // pokoknya ya jumlah yg dibutuhkan tidak peduli di sistem tersedia sejumlah itu atau tidak -> istilahe yg harus dipenuhi
                 // Gross Requirement = jumlah produksi * kebutuhan per unit
                 $grossRequirement = $material['gross_requirement'];
 
                 // Net Requirement → Kebutuhan material setelah dikurangi stok yang tersedia.
+                // jumlah yang harus dipenuhi karena ada kekurangan -> istilahe yg harus dibeli untuk menutup kekurangan
                 // Net Requirement = Gross Requirement - Stock On Hand
                 if ($material['status_material_requirement'] == 'partially') {
                     $netRequirement = max(0, $material['net_requirement'] - $stok['max_stock']);
@@ -164,10 +166,10 @@ class Struktur extends BaseController
                 ]);
 
                 // Kurangi stok material hanya jika belum fullfiled
-                if ($stok['max_stock'] > $stok['min_stock']) {
-                    $stokBaru = max(0, $stok['max_stock'] - $grossRequirement);
-                    $this->ModelMaterial->update($material['material_id'], ['max_stock' => $stokBaru]);
-                }
+                // if ($stok['max_stock'] > $stok['min_stock']) {
+                //     $stokBaru = max(0, $stok['max_stock'] - $grossRequirement);
+                //     $this->ModelMaterial->update($material['material_id'], ['max_stock' => $stokBaru]);
+                // }
             }
 
             // Cek Status Material Requirement dalam Produksi ini

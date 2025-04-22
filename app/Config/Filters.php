@@ -23,8 +23,11 @@ class Filters extends BaseConfig
         'secureheaders' => SecureHeaders::class,
         'filteradmin' => \App\Filters\FilterAdmin::class,
         'filtermanajer' => \App\Filters\FilterManajer::class,
-        'filterperencana' => \App\Filters\FilterPerencana::class,
+        'filterppc' => \App\Filters\FilterPPC::class,
         'filtergudang' => \App\Filters\FilterGudang::class,
+        'filtercs' => \App\Filters\FilterCS::class,
+        'filterspv' => \App\Filters\FilterSPV::class,
+        'filterqc' => \App\Filters\FilterQC::class,
     ];
 
     /**
@@ -45,7 +48,7 @@ class Filters extends BaseConfig
                     '/',
                 ]
             ],
-            'filterperencana' => [
+            'filterppc' => [
                 'except' => [
                     'Home', 'Home/*',
                     '/',
@@ -70,36 +73,65 @@ class Filters extends BaseConfig
                     'Struktur', 'Struktur/*',
                     'Material', 'Material/*',
                     'Pembelian', 'Pembelian/*',
+                    'ProcessStep', 'ProcessStep/*',
                     'Supplier', 'Supplier/*',
                     'User', 'User/*',
                     'Bom', 'Bom/*',
+                    'Order', 'Order/*',
+                    'Eksekusi', 'Eksekusi/*',
+                    'Approval', 'Approval/*',
+                    'Laporan', 'Laporan/*',
                 ]
             ],
             'filtermanajer' => [
                 'except' => [
                     'Home', 'Home/*',
                     '/',
-                    'Manajer', 'Manajer/*',
-                    'Bom', 'Bom/*',
-                    'Material', 'Material/*',
+                    'Admin', 'Admin/*',
+                    'Laporan', 'Laporan/*',
                 ]
             ],
-            'filterperencana' => [
+            'filtercs' => [
                 'except' => [
                     'Home', 'Home/*',
                     '/',
-                    'Perencana', 'Perencana/*',
-                    'Bom', 'Bom/*',
-                    'Material', 'Material/*',
+                    'Admin', 'Admin/*',
                     'Produksi', 'Produksi/*',
+                    'Order', 'Order/*',
                 ]
             ],
             'filtergudang' => [
                 'except' => [
                     'Home', 'Home/*',
                     '/',
-                    'Gudang', 'Gudang/*',
-                    'Material', 'Material/*',
+                    'Admin', 'Admin/*',
+                    'Laporan', 'Laporan/*',
+                ]
+            ],
+            'filterppc' => [
+                'except' => [
+                    'Home', 'Home/*',
+                    '/',
+                    'Admin', 'Admin/*',
+                    'Bom', 'Bom/*',
+                    'Order', 'Order/*',
+                ]
+            ],
+            'filterspv' => [
+                'except' => [
+                    'Home', 'Home/*',
+                    '/',
+                    'Admin', 'Admin/*',
+                    'Order', 'Order/*',
+                    'Eksekusi', 'Eksekusi/*',
+                ]
+            ],
+            'filterqc' => [
+                'except' => [
+                    'Home', 'Home/*',
+                    '/',
+                    'Admin', 'Admin/*',
+                    'Approval', 'Approval/*',
                 ]
             ],
         ],

@@ -45,7 +45,7 @@ class FilterGudang implements FilterInterface
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {
         if (session()->get('level') == '4') {
-            return redirect()->to(base_url('Gudang'));
+            return redirect()->to(base_url('Admin'));
         }
     }
 }

@@ -68,7 +68,7 @@
 
                 <?php $level = session()->get('level'); ?>
 
-                <!-- Untuk Admin (Level 1) -->
+                <!-- Untuk Super Admin (Level 1) -->
                 <?php if ($level == 1): ?>
 
                     <!-- Sidebar Menu -->
@@ -82,59 +82,172 @@
                                     </p>
                                 </a>
                             </li>
+
                             <li class="nav-item">
-                                <a href="<?= base_url('Supplier') ?>" class="nav-link <?= $menu == 'supplier' ? 'active' : '' ?>">
-                                    <i class="nav-icon fas fa-people-carry"></i>
-                                    <p>
-                                        Supplier
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?= base_url('Material') ?>" class="nav-link <?= $menu == 'material' ? 'active' : '' ?>">
+                                <a href="#" class="nav-link <?= $menu == 'supplier' || $page == 'admin/v_material' || $menu == 'produk' || $menu == 'process_step' ? 'active' : '' ?>">
                                     <i class="nav-icon fas fa-recycle"></i>
                                     <p>
-                                        Material
+                                        Master Data
+                                        <i class="fas fa-angle-left right"></i>
                                     </p>
                                 </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('Material') ?>" class="nav-link <?= $page == 'admin/v_material' ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>
+                                                Bahan Baku (Materials)
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('Supplier') ?>" class="nav-link <?= $menu == 'supplier' ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>
+                                                Supplier
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('Produk') ?>" class="nav-link <?= $menu == 'produk' ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Produk Jadi</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('ProcessStep') ?>" class="nav-link <?= $menu == 'process_step' ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Proses Produksi</p>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="<?= base_url('Pembelian') ?>" class="nav-link <?= $menu == 'pembelian' ? 'active' : '' ?>">
-                                    <i class="nav-icon fas fa-receipt"></i>
+                                <a href="#" class="nav-link <?= $menu == 'pembelian' || $page == 'admin/v_hasil_tahap1' || $page == 'admin/v_hasil_tahap2' || $page == 'admin/v_hasil_tahap3' || $page == 'admin/v_hasil_tahap4' ? 'active' : '' ?>">
+                                    <i class="nav-icon fas fa-shopping-basket"></i>
                                     <p>
-                                        Pembelian
+                                        Manajemen Stok
+                                        <i class="fas fa-angle-left right"></i>
                                     </p>
                                 </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('Pembelian') ?>" class="nav-link <?= $menu == 'pembelian' ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>
+                                                Pembelian (Inventori)
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link <?= $page == 'admin/v_hasil_tahap1' || $page == 'admin/v_hasil_tahap2' || $page == 'admin/v_hasil_tahap3' || $page == 'admin/v_hasil_tahap4' ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>
+                                                Hasil Proses Produksi
+                                                <i class="fas fa-angle-left right"></i>
+                                            </p>
+                                        </a>
+                                        <ul class="nav nav-treeview">
+                                            <li class="nav-item">
+                                                <a href="<?= base_url('Material/index/tahap1') ?>" class="nav-link <?= $page == 'admin/v_hasil_tahap1' ? 'active' : '' ?>">
+                                                    <i class="far fa-dot-circle nav-icon"></i>
+                                                    <p>Pembahanan (Tahap 1)</p>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="<?= base_url('Material/index/tahap2') ?>" class="nav-link <?= $page == 'admin/v_hasil_tahap2' ? 'active' : '' ?>">
+                                                    <i class="far fa-dot-circle nav-icon"></i>
+                                                    <p>Bentuk Dasar (Tahap 2)</p>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="<?= base_url('Material/index/tahap3') ?>" class="nav-link <?= $page == 'admin/v_hasil_tahap3' ? 'active' : '' ?>">
+                                                    <i class="far fa-dot-circle nav-icon"></i>
+                                                    <p>Rakit 1 (Tahap 3)</p>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="<?= base_url('Material/index/tahap4') ?>" class="nav-link <?= $page == 'admin/v_hasil_tahap4' ? 'active' : '' ?>">
+                                                    <i class="far fa-dot-circle nav-icon"></i>
+                                                    <p>Finishing (Tahap 4)</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="<?= base_url('Produk') ?>" class="nav-link <?= $menu == 'produk' ? 'active' : '' ?>">
-                                    <i class="nav-icon fas fa-boxes"></i>
-                                    <p>
-                                        Produk
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?= base_url('Bom') ?>" class="nav-link <?= $menu == 'bom' ? 'active' : '' ?>">
+                                <a href="#" class="nav-link <?= $menu == 'bom' ? 'active' : '' ?>">
                                     <i class="nav-icon fas fa-bookmark"></i>
                                     <p>
                                         BOM
+                                        <i class="fas fa-angle-left right"></i>
                                     </p>
                                 </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('Bom/index/1') ?>" class="nav-link <?= $page == 1 ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Pembahanan (Tahap 1)</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('Bom/index/2') ?>" class="nav-link <?= $page == 2 ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Bentuk Dasar (Tahap 2)</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('Bom/index/3') ?>" class="nav-link <?= $page == 3 ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Rakit 1 (Tahap 3)</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('Bom/index/4') ?>" class="nav-link <?= $page == 4 ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Finishing (Tahap 4)</p>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a href="<?= base_url('Produksi') ?>" class="nav-link <?= $menu == 'produksi' ? 'active' : '' ?>">
-                                    <i class="nav-icon fas fa-pallet"></i>
+                                    <i class="fas fa-pallet nav-icon"></i>
                                     <p>
-                                        Perencanaan Produksi
+                                        Perencanaan Produksi (MRP)
                                     </p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?= base_url('Struktur') ?>" class="nav-link <?= $menu == 'struktur' ? 'active' : '' ?>">
-                                    <i class="nav-icon fas fa-tasks"></i>
+                                <a href="<?= base_url('Order') ?>" class="nav-link <?= $menu == 'order' ? 'active' : '' ?>">
+                                    <i class="fas fa-tasks nav-icon"></i>
                                     <p>
-                                        Struktur Produk (Material Requirement)
+                                        Order Produksi
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('Eksekusi') ?>" class="nav-link <?= $menu == 'eksekusi' ? 'active' : '' ?>">
+                                    <i class="fas fa-shipping-fast nav-icon"></i>
+                                    <p>
+                                        Eksekusi Produksi
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('Approval') ?>" class="nav-link <?= $menu == 'approval' ? 'active' : '' ?>">
+                                    <i class="fas fa-check nav-icon"></i>
+                                    <p>
+                                        Approval Produksi
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('Laporan') ?>" class="nav-link <?= $menu == 'laporan' ? 'active' : '' ?>">
+                                    <i class="far fa-folder nav-icon"></i>
+                                    <p>
+                                        Laporan Stok
                                     </p>
                                 </a>
                             </li>
@@ -151,12 +264,12 @@
                     <!-- /.sidebar-menu -->
                 <?php endif; ?>
 
-                <!-- Untuk Manajer (Level 2) -->
+                <!-- Untuk Manajer Produksi (Level 2) -->
                 <?php if ($level == 2): ?>
                     <nav class="mt-2">
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                             <li class="nav-item">
-                                <a href="<?= base_url('Manajer') ?>" class="nav-link <?= $menu == 'manajer' ? 'active' : '' ?>">
+                                <a href="<?= base_url('Admin') ?>" class="nav-link <?= $menu == 'dashboard' ? 'active' : '' ?>">
                                     <i class="nav-icon fas fa-chart-line"></i>
                                     <p>
                                         Dashboard
@@ -164,18 +277,10 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?= base_url('Material') ?>" class="nav-link <?= $menu == 'material' ? 'active' : '' ?>">
-                                    <i class="nav-icon fas fa-recycle"></i>
+                                <a href="<?= base_url('Laporan') ?>" class="nav-link <?= $menu == 'laporan' ? 'active' : '' ?>">
+                                    <i class="far fa-folder nav-icon"></i>
                                     <p>
-                                        Material
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?= base_url('Bom') ?>" class="nav-link <?= $menu == 'bom' ? 'active' : '' ?>">
-                                    <i class="nav-icon fas fa-bookmark"></i>
-                                    <p>
-                                        BOM
+                                        Laporan
                                     </p>
                                 </a>
                             </li>
@@ -183,12 +288,12 @@
                     </nav>
                 <?php endif; ?>
 
-                <!-- Untuk Perencana (Level 3) -->
+                <!-- Untuk CS (Level 3) -->
                 <?php if ($level == 3): ?>
                     <nav class="mt-2">
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                             <li class="nav-item">
-                                <a href="<?= base_url('Perencana') ?>" class="nav-link <?= $menu == 'perencana' ? 'active' : '' ?>">
+                                <a href="<?= base_url('Admin') ?>" class="nav-link <?= $menu == 'dashboard' ? 'active' : '' ?>">
                                     <i class="nav-icon fas fa-chart-line"></i>
                                     <p>
                                         Dashboard
@@ -197,25 +302,17 @@
                             </li>
                             <li class="nav-item">
                                 <a href="<?= base_url('Produksi') ?>" class="nav-link <?= $menu == 'produksi' ? 'active' : '' ?>">
-                                    <i class="nav-icon fas fa-pallet"></i>
+                                    <i class="fas fa-pallet nav-icon"></i>
                                     <p>
-                                        Produksi
+                                        Perencanaan Produksi (MRP)
                                     </p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?= base_url('Material') ?>" class="nav-link <?= $menu == 'material' ? 'active' : '' ?>">
-                                    <i class="nav-icon fas fa-recycle"></i>
+                                <a href="<?= base_url('Order') ?>" class="nav-link <?= $menu == 'order' ? 'active' : '' ?>">
+                                    <i class="fas fa-tasks nav-icon"></i>
                                     <p>
-                                        Material
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="<?= base_url('Bom') ?>" class="nav-link <?= $menu == 'bom' ? 'active' : '' ?>">
-                                    <i class="nav-icon fas fa-bookmark"></i>
-                                    <p>
-                                        BOM
+                                        Order Produksi
                                     </p>
                                 </a>
                             </li>
@@ -223,12 +320,12 @@
                     </nav>
                 <?php endif; ?>
 
-                <!-- Untuk Gudang (Level 4) -->
+                <!-- Untuk Manajer Gudang (Level 4) -->
                 <?php if ($level == 4): ?>
                     <nav class="mt-2">
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                             <li class="nav-item">
-                                <a href="<?= base_url('Gudang') ?>" class="nav-link <?= $menu == 'gudang' ? 'active' : '' ?>">
+                                <a href="<?= base_url('Admin') ?>" class="nav-link <?= $menu == 'dashboarad' ? 'active' : '' ?>">
                                     <i class="nav-icon fas fa-chart-line"></i>
                                     <p>
                                         Dashboard
@@ -236,10 +333,125 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?= base_url('Material') ?>" class="nav-link <?= $menu == 'material' ? 'active' : '' ?>">
-                                    <i class="nav-icon fas fa-recycle"></i>
+                                <a href="<?= base_url('Laporan') ?>" class="nav-link <?= $menu == 'laporan' ? 'active' : '' ?>">
+                                    <i class="far fa-folder nav-icon"></i>
                                     <p>
-                                        Material
+                                        Laporan
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                <?php endif; ?>
+
+                <!-- Untuk PPC (Level 5) -->
+                <?php if ($level == 5): ?>
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                            <li class="nav-item">
+                                <a href="<?= base_url('Admin') ?>" class="nav-link <?= $menu == 'dashboarad' ? 'active' : '' ?>">
+                                    <i class="nav-icon fas fa-chart-line"></i>
+                                    <p>
+                                        Dashboard
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link <?= $menu == 'bom' ? 'active' : '' ?>">
+                                    <i class="nav-icon fas fa-bookmark"></i>
+                                    <p>
+                                        BOM
+                                        <i class="fas fa-angle-left right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('Bom/index/1') ?>" class="nav-link <?= $page == 1 ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Pembahanan (Tahap 1)</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('Bom/index/2') ?>" class="nav-link <?= $page == 2 ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Bentuk Dasar (Tahap 2)</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('Bom/index/3') ?>" class="nav-link <?= $page == 3 ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Rakit 1 (Tahap 3)</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('Bom/index/4') ?>" class="nav-link <?= $page == 4 ? 'active' : '' ?>">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Finishing (Tahap 4)</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <li class="nav-item">
+                            <a href="<?= base_url('Order') ?>" class="nav-link <?= $menu == 'order' ? 'active' : '' ?>">
+                                <i class="fas fa-tasks nav-icon"></i>
+                                <p>
+                                    Order Produksi
+                                </p>
+                            </a>
+                        </li>
+                    </nav>
+                <?php endif; ?>
+                
+                <!-- Untuk SPV (Level 6) -->
+                <?php if ($level == 6): ?>
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                            <li class="nav-item">
+                                <a href="<?= base_url('Admin') ?>" class="nav-link <?= $menu == 'dashboard' ? 'active' : '' ?>">
+                                    <i class="nav-icon fas fa-chart-line"></i>
+                                    <p>
+                                        Dashboard
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('Order') ?>" class="nav-link <?= $menu == 'order' ? 'active' : '' ?>">
+                                    <i class="fas fa-tasks nav-icon"></i>
+                                    <p>
+                                        Order Produksi
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('Eksekusi') ?>" class="nav-link <?= $menu == 'eksekusi' ? 'active' : '' ?>">
+                                    <i class="fas fa-shipping-fast nav-icon"></i>
+                                    <p>
+                                        Eksekusi Produksi
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                <?php endif; ?>
+                
+                <!-- Untuk QC (Level 7) -->
+                <?php if ($level == 7): ?>
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                            <li class="nav-item">
+                                <a href="<?= base_url('Admin') ?>" class="nav-link <?= $menu == 'dashboard' ? 'active' : '' ?>">
+                                    <i class="nav-icon fas fa-chart-line"></i>
+                                    <p>
+                                        Dashboard
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('Approval') ?>" class="nav-link <?= $menu == 'approval' ? 'active' : '' ?>">
+                                    <i class="fas fa-check nav-icon"></i>
+                                    <p>
+                                        Approval Produksi
                                     </p>
                                 </a>
                             </li>

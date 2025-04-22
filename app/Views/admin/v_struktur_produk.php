@@ -6,9 +6,9 @@
             <div class="card-tools">
                 <!-- <button type="button" class="btn btn-tool" data-toggle="modal" data-target="#add-data"><i class="fas fa-plus"></i> Add Data
                 </button> -->
-                <a href="<?= base_url('Struktur/hitungMaterialRequirement'); ?>" class="btn btn-tool">
+                <!-- <a href="<?= base_url('Struktur/hitungMaterialRequirement'); ?>" class="btn btn-tool">
                     <i class="fas fa-calculator"></i> &nbsp;Hitung Material Requirement
-                </a>
+                </a> -->
 
             </div>
             <!-- /.card-tools -->

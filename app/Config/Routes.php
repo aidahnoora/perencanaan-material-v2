@@ -31,6 +31,15 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->get('Bom/index', 'Bom::index');
+$routes->get('Bom/index/(:num)', 'Bom::index/$1');
+$routes->post('Bom/insert', 'Bom::InsertData');
+$routes->post('Bom/update/(:num)/(:num)', 'Bom::UpdateData/$1/$2');
+$routes->get('Bom/delete/(:num)/(:num)', 'Bom::DeleteData/$1/$2');
+
+$routes->get('Material/(:segment)', 'Material::index/$1');
+$routes->get('Material', 'Material::index'); // default ke 'raw'
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

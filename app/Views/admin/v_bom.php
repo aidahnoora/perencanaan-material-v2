@@ -40,7 +40,7 @@
                                 <td class="text-center">
                                     <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#detail-bom<?= $bom['id_bom'] ?>"><i class="fas fa-eye"></i></button>
                                     <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#edit-bom<?= $bom['id_bom'] ?>"><i class="fas fa-pencil-alt"></i></button>
-                                    <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete-bom<?= $bom['id_bom'] ?>"><i class="fas fa-trash"></i></button>
+                                    <!-- <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete-bom<?= $bom['id_bom'] ?>"><i class="fas fa-trash"></i></button> -->
                                 </td>
                             </tr>
                         <?php endforeach; ?>

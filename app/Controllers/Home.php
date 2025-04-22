@@ -48,11 +48,17 @@ class Home extends BaseController
                 if ($cek_login['level'] == 1) {
                     return redirect()->to(base_url('Admin'));
                 } elseif ($cek_login['level'] == 2) {
-                    return redirect()->to(base_url('Manajer'));
+                    return redirect()->to(base_url('Admin'));
                 } elseif ($cek_login['level'] == 3) {
-                    return redirect()->to(base_url('Perencana'));
+                    return redirect()->to(base_url('Admin'));
                 } elseif ($cek_login['level'] == 4) {
-                    return redirect()->to(base_url('Gudang'));
+                    return redirect()->to(base_url('Admin'));
+                } elseif ($cek_login['level'] == 5) {
+                    return redirect()->to(base_url('Admin'));
+                } elseif ($cek_login['level'] == 6) {
+                    return redirect()->to(base_url('Admin'));
+                } elseif ($cek_login['level'] == 7) {
+                    return redirect()->to(base_url('Admin'));
                 }
             } else {
                 // Jika login gagal

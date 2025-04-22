@@ -4,22 +4,66 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\ModelBomDetail;
+use App\Models\ModelEksekusiStok;
+use App\Models\ModelMaterial;
+use App\Models\ModelOrderProduksi;
 use App\Models\ModelProduk;
 use App\Models\ModelProduksi;
 use App\Models\ModelStruktur;
 
 class Produksi extends BaseController
 {
+    protected $ModelProduk;
+    protected $ModelProduksi;
+    protected $ModelBomDetail;
+    protected $ModelStruktur;
+    protected $ModelMaterial;
+    protected $ModelOrderProduksi;
+    protected $ModelEksekusiStok;
+
     public function __construct()
     {
         $this->ModelProduk = new ModelProduk();
         $this->ModelProduksi = new ModelProduksi();
         $this->ModelBomDetail = new ModelBomDetail();
         $this->ModelStruktur = new ModelStruktur();
+        $this->ModelMaterial = new ModelMaterial();
+        $this->ModelOrderProduksi = new ModelOrderProduksi();
+        $this->ModelEksekusiStok = new ModelEksekusiStok();
     }
 
     public function index()
     {
+        $productions = $this->ModelProduksi->AllData();
+
+        foreach ($productions as &$production) {
+            $production['material_requirements'] = $this->ModelStruktur->getMaterialRequirementByProductionId($production['id'], 1);
+            $production['materials2'] = $this->ModelStruktur->getMaterialRequirementByProductionId($production['id'], 2);
+            $production['materials3'] = $this->ModelStruktur->getMaterialRequirementByProductionId($production['id'], 3);
+            $production['materials4'] = $this->ModelStruktur->getMaterialRequirementByProductionId($production['id'], 4);
+
+            $production['bom_id'] = !empty($production['material_requirements']) ? $production['material_requirements'][0]['bom_id'] : null;
+            $production['bom_id_2'] = !empty($production['materials2']) ? $production['materials2'][0]['bom_id'] : null;
+            $production['bom_id_3'] = !empty($production['materials3']) ? $production['materials3'][0]['bom_id'] : null;
+            $production['bom_id_4'] = !empty($production['materials4']) ? $production['materials4'][0]['bom_id'] : null;
+
+            $executionStock = $production['execution_stock'] = $this->ModelEksekusiStok->getExecutionStocksByPlanningId($production['id']);
+            
+            if (!empty($executionStock)) {
+                $production['execution_stocks'] = $executionStock;
+            } else {
+                continue;
+            }
+
+            if (!empty($production['bom_id_2'])) {
+                $production['bom_id_2'] = $production['bom_id_2'];
+            } else {
+                continue;
+            }
+
+            // dd($production['materials2']);
+        }
+
         $data = [
             'judul' => 'Produksi',
             'subjudul' => '',
@@ -27,7 +71,7 @@ class Produksi extends BaseController
             'submenu' => '',
             'page' => 'admin/v_produksi',
             'products' => $this->ModelProduk->AllData(),
-            'productions' => $this->ModelProduksi->AllData(),
+            'productions' => $productions,
         ];
 
         return view('v_template', $data);
@@ -53,13 +97,27 @@ class Produksi extends BaseController
             ]
         ])) {
             $db = \Config\Database::connect();
-            $db->transStart(); // Mulai transaksi
+            $db->transStart();
 
             try {
-                // Simpan data produksi
+                $boms = $db->table('boms')
+                    ->select('id_bom, process_step_id')
+                    ->where('product_id', $this->request->getPost('product_id'))
+                    // ->where('process_step_id', 1) 
+                    // ->limit(1)
+                    ->get()
+                    ->getResultArray();
+
+                // dd($bom['id_bom']);
+
+                if (!$boms) {
+                    throw new \Exception("BOM tidak ditemukan untuk produk ini.");
+                }
+
+                // 1. Simpan data produksi
                 $dataProduksi = [
                     'product_id' => $this->request->getPost('product_id'),
-                    'order_number' => $this->request->getPost('order_number'),
+                    // 'bom_id' => $bom['id_bom'],
                     'planned_date' => $this->request->getPost('planned_date'),
                     'quality' => $this->request->getPost('quality'),
                     'priority' => $this->request->getPost('priority'),
@@ -72,40 +130,39 @@ class Produksi extends BaseController
                     throw new \Exception("Gagal menyimpan data produksi.");
                 }
 
-                // Ambil BOM berdasarkan produk
-                $bomModel = $this->ModelBomDetail;
-                $bomDetails = $bomModel->select('material_id, quantity_needed')
-                    ->whereIn('bom_id', function ($builder) {
-                        return $builder->select('id_bom')
-                            ->from('boms')
-                            ->where('product_id', $this->request->getPost('product_id'));
-                    })->findAll();
-
-                // Jika BOM tidak ditemukan, rollback transaksi dan tampilkan pesan error
-                if (empty($bomDetails)) {
-                    $db->transRollback();
-                    session()->setFlashdata('pesan', 'BOM tidak ditemukan untuk produk ini. Insert gagal!');
-                    return redirect()->to(base_url('Produksi'))->withInput();
-                }
-
-                // Hitung kebutuhan material
-                $materialReqModel = $this->ModelStruktur;
-                foreach ($bomDetails as $bom) {
-                    $grossRequirement = $bom['quantity_needed'] * $this->request->getPost('quality');
-
-                    $dataMaterialReq = [
-                        'production_planning_id' => $productionId,
-                        'material_id' => $bom['material_id'],
-                        'gross_requirement' => $grossRequirement,
-                        'net_requirement' => 0, // Bisa dikurangi stok tersedia jika ada fitur stok
-                        'status_material_requirement' => 'pending',
-                    ];
-                    if (!$materialReqModel->insert($dataMaterialReq)) {
-                        throw new \Exception("Gagal menyimpan data material requirements.");
+                // 2. Ambil BOM produk
+                foreach ($boms as $bom) {
+                    $bomDetails = $this->ModelBomDetail
+                        ->select('material_id, quantity_needed')
+                        ->where('bom_id', $bom['id_bom'])
+                        ->findAll();
+                
+                    foreach ($bomDetails as $bomDetail) {
+                        $stok = $this->ModelMaterial->find($bomDetail['material_id']);
+                        $grossRequirement = $bomDetail['quantity_needed'] * $this->request->getPost('quality');
+                        $netRequirement = max(0, $grossRequirement - $stok['max_stock']);
+                
+                        if ($netRequirement == 0) {
+                            $status = 'fullfiled';
+                        } elseif ($netRequirement > 0 && $stok['max_stock'] > 0) {
+                            $status = 'partially';
+                        } else {
+                            $status = 'pending';
+                        }
+                
+                        $this->ModelStruktur->insert([
+                            'production_planning_id' => $productionId,
+                            'material_id' => $bomDetail['material_id'],
+                            'gross_requirement' => $grossRequirement,
+                            'net_requirement' => $netRequirement,
+                            'status_material_requirement' => $status,
+                            'bom_id' => $bom['id_bom'],
+                            'process_step_id' => $bom['process_step_id'],
+                        ]);
                     }
-                }
+                }                
 
-                $db->transComplete(); // Selesaikan transaksi
+                $db->transComplete();
 
                 if ($db->transStatus() === false) {
                     throw new \Exception("Terjadi kesalahan saat menyimpan data.");
@@ -114,13 +171,65 @@ class Produksi extends BaseController
                 session()->setFlashdata('pesan', 'Produksi dan kebutuhan material berhasil ditambahkan!');
                 return redirect()->to(base_url('Produksi'));
             } catch (\Exception $e) {
-                $db->transRollback(); // Rollback jika terjadi error
+                $db->transRollback();
                 session()->setFlashdata('errors', [$e->getMessage()]);
                 return redirect()->to(base_url('Produksi'))->withInput();
             }
         } else {
             session()->setFlashdata('errors', \Config\Services::validation()->getErrors());
             return redirect()->to(base_url('Produksi'))->withInput();
+        }
+    }
+
+    public function updateRequirement($productionId)
+    {
+        $db = \Config\Database::connect();
+        $db->transStart();
+
+        try {
+            // 1. Ambil semua material yang dibutuhkan untuk produksi ini
+            $requirements = $this->ModelStruktur
+                ->where('production_planning_id', $productionId)
+                ->findAll();
+
+            foreach ($requirements as $req) {
+                $materialId = $req['material_id'];
+
+                // 2. Ambil stok terbaru dari tabel material
+                $material = $this->ModelMaterial->find($materialId);
+                $stok = $material['max_stock'];
+
+                $grossRequirement = $req['gross_requirement'];
+                $netRequirement = max(0, $grossRequirement - $stok);
+
+                // 3. Tentukan status requirement
+                if ($netRequirement == 0) {
+                    $status = 'fullfiled';
+                } elseif ($netRequirement > 0 && $stok > 0) {
+                    $status = 'partially';
+                } else {
+                    $status = 'pending';
+                }
+
+                // 4. Update ke tabel material_requirements
+                $this->ModelStruktur->update($req['id_material_requirement'], [
+                    'net_requirement' => $netRequirement,
+                    'status_material_requirement' => $status
+                ]);
+            }
+
+            $db->transComplete();
+
+            if ($db->transStatus() === false) {
+                throw new \Exception("Gagal memperbarui kebutuhan material.");
+            }
+
+            session()->setFlashdata('pesan', 'Status dan kebutuhan material berhasil diperbarui!');
+            return redirect()->to(base_url('Produksi'));
+        } catch (\Exception $e) {
+            $db->transRollback();
+            session()->setFlashdata('errors', [$e->getMessage()]);
+            return redirect()->to(base_url('Produksi'));
         }
     }
 
@@ -137,8 +246,6 @@ class Produksi extends BaseController
         ])) {
             $data = [
                 'id' => $id,
-                'product_id' => $this->request->getPost('product_id'),
-                'order_number' => $this->request->getPost('order_number'),
                 'planned_date' => $this->request->getPost('planned_date'),
                 'quality' => $this->request->getPost('quality'),
                 'priority' => $this->request->getPost('priority'),
@@ -146,10 +253,11 @@ class Produksi extends BaseController
                 'notes' => $this->request->getPost('notes'),
             ];
             $this->ModelProduksi->UpdateData($data);
+
             session()->setFlashdata('pesan', 'Data Berhasil Diupdate!');
             return redirect()->to(base_url('Produksi'));
         } else {
-            session()->setFlashdata('errors', \Config\Services::validation()->getErrors());
+            session()->setFlashdata('pesan', \Config\Services::validation()->getErrors());
             return redirect()->to(base_url('Produksi'))->withInput('validation', \Config\Services::validation());
         }
     }

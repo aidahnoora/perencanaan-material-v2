@@ -10,6 +10,7 @@ class ModelPembelian extends Model
     protected $primaryKey = 'id_inventory';
     protected $allowedFields = [
         'material_id',
+        'supplier_id',
         'current_stock',
         'allocated_qty',
         'warehouse_location',
@@ -21,6 +22,7 @@ class ModelPembelian extends Model
     {
         return $this->db->table('inventories')
             ->join('materials', 'materials.id_material=inventories.material_id')
+            ->join('suppliers', 'suppliers.id_supplier=inventories.supplier_id')
             ->orderBy('id_inventory', 'DESC')
             ->get()
             ->getResultArray();

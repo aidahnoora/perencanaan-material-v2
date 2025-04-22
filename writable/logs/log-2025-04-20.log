@@ -1,0 +1,1159 @@
+INFO - 2025-04-20 01:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:19:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 01:19:18 --> mysqli_sql_exception: Column 'production_execution_id' cannot be null in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ex...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ex...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ex...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ex...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiProduksi.php(39): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Eksekusi.php(66): App\Models\ModelEksekusiProduksi->InsertMaterialData(Array)
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Eksekusi->InsertData()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2025-04-20 01:19:18 --> mysqli_sql_exception: Column 'production_execution_id' cannot be null in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ex...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ex...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ex...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ex...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiProduksi.php(39): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Eksekusi.php(66): App\Models\ModelEksekusiProduksi->InsertMaterialData(Array)
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Eksekusi->InsertData()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2025-04-20 01:19:18 --> mysqli_sql_exception: Column 'production_execution_id' cannot be null in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ex...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ex...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ex...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ex...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiProduksi.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Eksekusi.php(82): App\Models\ModelEksekusiProduksi->InsertOutputData(Array)
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Eksekusi->InsertData()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+INFO - 2025-04-20 01:19:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 01:19:18 --> Array to string conversion
+in APPPATH\Views\admin\v_eksekusi.php on line 13.
+ 1 APPPATH\Views\admin\v_eksekusi.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\admin\\v_eksekusi.php', 13, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_eksekusi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_eksekusi', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_eksekusi')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Eksekusi.php(27): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 01:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:21:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:48:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:48:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 01:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 02:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 03:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 04:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 04:01:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 04:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 04:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 04:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 04:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 04:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 04:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 04:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 04:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 04:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 04:04:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 04:04:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 05:22:25 --> Undefined index: production_order_details
+in APPPATH\Views\admin\v_eksekusi.php on line 168.
+ 1 APPPATH\Views\admin\v_eksekusi.php(168): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: production_order_details', 'APPPATH\\Views\\admin\\v_eksekusi.php', 168, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_eksekusi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_eksekusi', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_eksekusi')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Eksekusi.php(27): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 05:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 05:24:16 --> Undefined index: production_order_details
+in APPPATH\Views\admin\v_eksekusi.php on line 168.
+ 1 APPPATH\Views\admin\v_eksekusi.php(168): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: production_order_details', 'APPPATH\\Views\\admin\\v_eksekusi.php', 168, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_eksekusi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_eksekusi', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_eksekusi')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Eksekusi.php(27): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 05:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:40:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:41:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:41:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 05:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 07:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 07:04:42 --> Call to undefined method App\Models\ModelEksekusiStok::getSingleStockByExecutionId
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Eksekusi.php(25): CodeIgniter\Model->__call('getSingleStockByExecutionId', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 07:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 07:05:56 --> Call to undefined method App\Models\ModelEksekusiStok::getSingleStockByExecutionId
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Eksekusi.php(25): CodeIgniter\Model->__call('getSingleStockByExecutionId', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 07:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 10:09:20 --> Undefined index: step_name
+in APPPATH\Views\admin\v_eksekusi.php on line 122.
+ 1 APPPATH\Views\admin\v_eksekusi.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: step_name', 'APPPATH\\Views\\admin\\v_eksekusi.php', 122, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_eksekusi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_eksekusi', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_eksekusi')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Eksekusi.php(36): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 10:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 10:10:08 --> Undefined index: step_name
+in APPPATH\Views\admin\v_eksekusi.php on line 122.
+ 1 APPPATH\Views\admin\v_eksekusi.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: step_name', 'APPPATH\\Views\\admin\\v_eksekusi.php', 122, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_eksekusi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_eksekusi', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_eksekusi')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Eksekusi.php(36): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 10:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 10:10:46 --> Undefined index: step_name
+in APPPATH\Views\admin\v_eksekusi.php on line 122.
+ 1 APPPATH\Views\admin\v_eksekusi.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: step_name', 'APPPATH\\Views\\admin\\v_eksekusi.php', 122, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_eksekusi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_eksekusi', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_eksekusi')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Eksekusi.php(36): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 10:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 10:11:19 --> Undefined index: step_name
+in APPPATH\Views\admin\v_eksekusi.php on line 122.
+ 1 APPPATH\Views\admin\v_eksekusi.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: step_name', 'APPPATH\\Views\\admin\\v_eksekusi.php', 122, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_eksekusi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_eksekusi', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_eksekusi')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Eksekusi.php(36): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 10:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 10:11:27 --> Undefined index: step_name
+in APPPATH\Views\admin\v_eksekusi.php on line 122.
+ 1 APPPATH\Views\admin\v_eksekusi.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: step_name', 'APPPATH\\Views\\admin\\v_eksekusi.php', 122, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_eksekusi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_eksekusi', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_eksekusi')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Eksekusi.php(36): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 10:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:39:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:40:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:40:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 10:40:18 --> mysqli_sql_exception: Unknown column 'notes' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ex...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ex...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ex...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ex...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiProduksi.php(56): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Eksekusi.php(142): App\Models\ModelEksekusiProduksi->InsertApproval(Array)
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Eksekusi->KirimApproval()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 10:40:18 --> Unknown column 'notes' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `execution_approvals` (`execution_stock_id`, `user_id`, `role`, `approved_qty`, `rejected_qty`, `notes`, `approve_at`) VALUES (:execution_stock_id:, :user_id:, :role:, :approved_qty:, :rejected_qty:, :notes:, :approve_at:)', [...], false)
+ 2 APPPATH\Models\ModelEksekusiProduksi.php(56): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Eksekusi.php(142): App\Models\ModelEksekusiProduksi->InsertApproval([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->KirimApproval()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 10:41:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 10:41:16 --> mysqli_sql_exception: Unknown column 'notes' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ex...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ex...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ex...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ex...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiProduksi.php(56): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Eksekusi.php(142): App\Models\ModelEksekusiProduksi->InsertApproval(Array)
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Eksekusi->KirimApproval()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 10:41:16 --> Unknown column 'notes' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `execution_approvals` (`execution_stock_id`, `user_id`, `role`, `approved_qty`, `rejected_qty`, `notes`, `approve_at`) VALUES (:execution_stock_id:, :user_id:, :role:, :approved_qty:, :rejected_qty:, :notes:, :approve_at:)', [...], false)
+ 2 APPPATH\Models\ModelEksekusiProduksi.php(56): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Eksekusi.php(142): App\Models\ModelEksekusiProduksi->InsertApproval([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->KirimApproval()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 10:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 10:41:24 --> mysqli_sql_exception: Unknown column 'notes' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ex...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ex...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ex...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ex...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiProduksi.php(56): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Eksekusi.php(142): App\Models\ModelEksekusiProduksi->InsertApproval(Array)
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Eksekusi->KirimApproval()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 10:41:24 --> Unknown column 'notes' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `execution_approvals` (`execution_stock_id`, `user_id`, `role`, `approved_qty`, `rejected_qty`, `notes`, `approve_at`) VALUES (:execution_stock_id:, :user_id:, :role:, :approved_qty:, :rejected_qty:, :notes:, :approve_at:)', [...], false)
+ 2 APPPATH\Models\ModelEksekusiProduksi.php(56): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Eksekusi.php(142): App\Models\ModelEksekusiProduksi->InsertApproval([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->KirimApproval()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 10:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 10:42:51 --> mysqli_sql_exception: Unknown column 'notes_approval' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ex...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ex...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ex...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ex...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiProduksi.php(56): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Eksekusi.php(142): App\Models\ModelEksekusiProduksi->InsertApproval(Array)
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Eksekusi->KirimApproval()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 10:42:51 --> Unknown column 'notes_approval' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `execution_approvals` (`execution_stock_id`, `user_id`, `role`, `approved_qty`, `rejected_qty`, `notes_approval`, `approve_at`) VALUES (:execution_stock_id:, :user_id:, :role:, :approved_qty:, :rejected_qty:, :notes_approval:, :approve_at:)', [...], false)
+ 2 APPPATH\Models\ModelEksekusiProduksi.php(56): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Eksekusi.php(142): App\Models\ModelEksekusiProduksi->InsertApproval([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->KirimApproval()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 10:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 10:45:00 --> mysqli_sql_exception: Unknown column 'notes_approval' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ex...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ex...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ex...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ex...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiProduksi.php(56): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Eksekusi.php(142): App\Models\ModelEksekusiProduksi->InsertApproval(Array)
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Eksekusi->KirimApproval()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 10:45:00 --> Unknown column 'notes_approval' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `execution_approvals` (`execution_stock_id`, `user_id`, `role`, `approved_qty`, `rejected_qty`, `notes_approval`, `approve_at`) VALUES (:execution_stock_id:, :user_id:, :role:, :approved_qty:, :rejected_qty:, :notes_approval:, :approve_at:)', [...], false)
+ 2 APPPATH\Models\ModelEksekusiProduksi.php(56): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Eksekusi.php(142): App\Models\ModelEksekusiProduksi->InsertApproval([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->KirimApproval()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 10:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 10:50:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 12:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 12:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 12:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:06:55 --> mysqli_sql_exception: Table 'db_perencanaan_material.users' doesn't exist in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:06:55 --> Table 'db_perencanaan_material.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `production_orders`.`order_number`, `products`.`product_name`, `execution_approvals`.`approved_qty`, `execution_approvals`.`rejected_qty`, `execution_approvals`.`notes` as `approval_notes`, `users`.`name` as `approved_by`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`
+LEFT JOIN `execution_approvals` ON `execution_approvals`.`execution_stock_id` = `execution_stocks`.`id_execution_stock`
+LEFT JOIN `users` ON `users`.`id_user` = `execution_approvals`.`user_id`
+WHERE `execution_stocks`.`status` = :execution_stocks.status:', [...], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:07:14 --> mysqli_sql_exception: Unknown column 'production_orders.order_number' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:07:14 --> Unknown column 'production_orders.order_number' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `production_orders`.`order_number`, `products`.`product_name`, `execution_approvals`.`approved_qty`, `execution_approvals`.`rejected_qty`, `execution_approvals`.`notes` as `approval_notes`, `tbl_user`.`name` as `approved_by`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`
+LEFT JOIN `execution_approvals` ON `execution_approvals`.`execution_stock_id` = `execution_stocks`.`id_execution_stock`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `execution_approvals`.`user_id`
+WHERE `execution_stocks`.`status` = :execution_stocks.status:', [...], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:10:15 --> mysqli_sql_exception: Unknown column 'execution_approvals.notes' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:10:15 --> Unknown column 'execution_approvals.notes' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `production_orders`.`order_number`, `products`.`product_name`, `execution_approvals`.`approved_qty`, `execution_approvals`.`rejected_qty`, `execution_approvals`.`notes` as `approval_notes`, `tbl_user`.`name` as `approved_by`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`
+LEFT JOIN `execution_approvals` ON `execution_approvals`.`execution_stock_id` = `execution_stocks`.`id_execution_stock`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `execution_approvals`.`user_id`
+WHERE `execution_stocks`.`status` = :execution_stocks.status:', [...], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:10:37 --> mysqli_sql_exception: Unknown column 'tbl_user.name' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:10:37 --> Unknown column 'tbl_user.name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `production_orders`.`order_number`, `products`.`product_name`, `execution_approvals`.`approved_qty`, `execution_approvals`.`rejected_qty`, `execution_approvals`.`notes_approval` as `approval_notes`, `tbl_user`.`name` as `approved_by`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`
+LEFT JOIN `execution_approvals` ON `execution_approvals`.`execution_stock_id` = `execution_stocks`.`id_execution_stock`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `execution_approvals`.`user_id`
+WHERE `execution_stocks`.`status` = :execution_stocks.status:', [...], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:10:57 --> mysqli_sql_exception: Unknown column 'production_orders.product_id' in 'on clause' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:10:57 --> Unknown column 'production_orders.product_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `production_orders`.`order_number`, `products`.`product_name`, `execution_approvals`.`approved_qty`, `execution_approvals`.`rejected_qty`, `execution_approvals`.`notes_approval` as `approval_notes`, `tbl_user`.`nama_user` as `approved_by`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`
+LEFT JOIN `execution_approvals` ON `execution_approvals`.`execution_stock_id` = `execution_stocks`.`id_execution_stock`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `execution_approvals`.`user_id`
+WHERE `execution_stocks`.`status` = :execution_stocks.status:', [...], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 12:12:19 --> Undefined index: planned_date_order
+in APPPATH\Views\admin\v_approval.php on line 48.
+ 1 APPPATH\Views\admin\v_approval.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: planned_date_order', 'APPPATH\\Views\\admin\\v_approval.php', 48, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_approval.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_approval', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_approval')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Approval.php(27): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 12:14:22 --> Undefined index: id_production_execution
+in APPPATH\Views\admin\v_approval.php on line 61.
+ 1 APPPATH\Views\admin\v_approval.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_production_execution', 'APPPATH\\Views\\admin\\v_approval.php', 61, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_approval.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_approval', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_approval')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Approval.php(27): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 12:14:40 --> Undefined index: id_execution_approval
+in APPPATH\Views\admin\v_approval.php on line 61.
+ 1 APPPATH\Views\admin\v_approval.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_execution_approval', 'APPPATH\\Views\\admin\\v_approval.php', 61, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_approval.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_approval', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_approval')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Approval.php(27): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 12:15:21 --> Undefined index: deskripsi
+in APPPATH\Views\admin\v_approval.php on line 132.
+ 1 APPPATH\Views\admin\v_approval.php(132): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: deskripsi', 'APPPATH\\Views\\admin\\v_approval.php', 132, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_approval.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_approval', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_approval')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Approval.php(27): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:16:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 12:16:11 --> Undefined index: status_order
+in APPPATH\Views\admin\v_approval.php on line 137.
+ 1 APPPATH\Views\admin\v_approval.php(137): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: status_order', 'APPPATH\\Views\\admin\\v_approval.php', 137, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_approval.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_approval', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_approval')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Approval.php(27): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 12:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 12:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:25:34 --> mysqli_sql_exception: Unknown column 'execution_approvals.approved_qty' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:25:34 --> Unknown column 'execution_approvals.approved_qty' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `process_steps`.`step_order`, `production_orders`.`order_number`, `production_orders`.`planned_date_order`, `execution_approvals`.`approved_qty`, `execution_approvals`.`rejected_qty`, `execution_approvals`.`notes_approval`, `tbl_user`.`nama_user`, `tbl_user`.`deskripsi`, `products`.`product_name`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`
+WHERE `execution_stocks`.`status` = :execution_stocks.status:', [...], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:26:36 --> mysqli_sql_exception: Unknown column 'execution_approvals.approved_qty' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:26:36 --> Unknown column 'execution_approvals.approved_qty' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `process_steps`.`step_order`, `production_orders`.`order_number`, `production_orders`.`planned_date_order`, `execution_approvals`.`approved_qty`, `execution_approvals`.`rejected_qty`, `execution_approvals`.`notes_approval`, `tbl_user`.`nama_user`, `tbl_user`.`deskripsi`, `products`.`product_name`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`', [], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:26:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:26:39 --> mysqli_sql_exception: Unknown column 'execution_approvals.approved_qty' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:26:39 --> Unknown column 'execution_approvals.approved_qty' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `process_steps`.`step_order`, `production_orders`.`order_number`, `production_orders`.`planned_date_order`, `execution_approvals`.`approved_qty`, `execution_approvals`.`rejected_qty`, `execution_approvals`.`notes_approval`, `tbl_user`.`nama_user`, `tbl_user`.`deskripsi`, `products`.`product_name`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`', [], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:26:59 --> mysqli_sql_exception: Unknown column 'execution_approvals.approved_qty' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:26:59 --> Unknown column 'execution_approvals.approved_qty' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `process_steps`.`step_order`, `production_orders`.`order_number`, `production_orders`.`planned_date_order`, `execution_approvals`.`approved_qty`, `execution_approvals`.`rejected_qty`, `execution_approvals`.`notes_approval`, `tbl_user`.`nama_user`, `tbl_user`.`deskripsi`, `products`.`product_name`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`', [], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:30:15 --> mysqli_sql_exception: Unknown column 'execution_approvals.approved_qty' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:30:15 --> Unknown column 'execution_approvals.approved_qty' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `process_steps`.`step_order`, `production_orders`.`order_number`, `production_orders`.`planned_date_order`, `execution_approvals`.`approved_qty`, `execution_approvals`.`rejected_qty`, `execution_approvals`.`notes_approval`, `tbl_user`.`nama_user`, `tbl_user`.`deskripsi`, `products`.`product_name`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`', [], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:30:47 --> mysqli_sql_exception: Unknown column 'execution_approvals.approved_qty' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:30:47 --> Unknown column 'execution_approvals.approved_qty' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `process_steps`.`step_order`, `production_orders`.`order_number`, `production_orders`.`planned_date_order`, `execution_approvals`.`approved_qty`, `execution_approvals`.`rejected_qty`, `execution_approvals`.`notes_approval`, `tbl_user`.`nama_user`, `tbl_user`.`deskripsi`, `products`.`product_name`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`', [], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:31:17 --> mysqli_sql_exception: Unknown column 'execution_approvals.approved_qty' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:31:17 --> Unknown column 'execution_approvals.approved_qty' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `process_steps`.`step_order`, `production_orders`.`order_number`, `production_orders`.`planned_date_order`, `execution_approvals`.`approved_qty`, `execution_approvals`.`rejected_qty`, `execution_approvals`.`notes_approval`, `tbl_user`.`nama_user`, `tbl_user`.`deskripsi`, `products`.`product_name`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`', [], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:31:51 --> mysqli_sql_exception: Unknown column 'execution_approvals.rejected_qty' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:31:51 --> Unknown column 'execution_approvals.rejected_qty' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `process_steps`.`step_order`, `production_orders`.`order_number`, `production_orders`.`planned_date_order`, `execution_approvals`.`rejected_qty`, `execution_approvals`.`notes_approval`, `tbl_user`.`nama_user`, `tbl_user`.`deskripsi`, `products`.`product_name`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`', [], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-20 12:32:05 --> mysqli_sql_exception: Unknown column 'execution_approvals.notes_approval' in 'field list' in C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\laragon\www\perencanaan-material-v2\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `executi...', 0)
+#1 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `executi...')
+#2 C:\laragon\www\perencanaan-material-v2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `executi...')
+#3 C:\laragon\www\perencanaan-material-v2\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `executi...', Array, false)
+#4 C:\laragon\www\perencanaan-material-v2\app\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\perencanaan-material-v2\app\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+#6 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(934): App\Controllers\Approval->index()
+#7 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+#8 C:\laragon\www\perencanaan-material-v2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\perencanaan-material-v2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2025-04-20 12:32:05 --> Unknown column 'execution_approvals.notes_approval' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `execution_stocks`.*, `process_steps`.`step_name`, `process_steps`.`step_order`, `production_orders`.`order_number`, `production_orders`.`planned_date_order`, `execution_approvals`.`notes_approval`, `tbl_user`.`nama_user`, `tbl_user`.`deskripsi`, `products`.`product_name`
+FROM `execution_stocks`
+LEFT JOIN `process_steps` ON `process_steps`.`id_process_step` = `execution_stocks`.`process_step_id`
+LEFT JOIN `production_executions` ON `production_executions`.`id_production_execution` = `execution_stocks`.`production_execution_id`
+LEFT JOIN `production_orders` ON `production_orders`.`id_production_order` = `production_executions`.`production_order_id`
+LEFT JOIN `products` ON `products`.`id_product` = `production_orders`.`product_id`', [], false)
+ 2 APPPATH\Models\ModelEksekusiApproval.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Approval.php(25): App\Models\ModelEksekusiApproval->AllData()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 12:32:40 --> Undefined index: nama_user
+in APPPATH\Views\admin\v_approval.php on line 131.
+ 1 APPPATH\Views\admin\v_approval.php(131): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama_user', 'APPPATH\\Views\\admin\\v_approval.php', 131, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_approval.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_approval', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_approval')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Approval.php(27): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 12:37:56 --> Undefined index: id_production_execution
+in APPPATH\Controllers\Approval.php on line 22.
+ 1 APPPATH\Controllers\Approval.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id_production_execution', 'APPPATH\\Controllers\\Approval.php', 22, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 12:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 13:30:58 --> Undefined index: approve_by
+in APPPATH\Views\admin\v_approval.php on line 112.
+ 1 APPPATH\Views\admin\v_approval.php(112): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: approve_by', 'APPPATH\\Views\\admin\\v_approval.php', 112, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_approval.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_approval', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_approval')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Approval.php(33): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 13:31:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 13:31:25 --> Undefined index: material_requirements
+in APPPATH\Views\admin\v_approval.php on line 136.
+ 1 APPPATH\Views\admin\v_approval.php(136): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: material_requirements', 'APPPATH\\Views\\admin\\v_approval.php', 136, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_approval.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_approval', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_approval')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Approval.php(33): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 13:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 13:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:40:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 14:41:10 --> Undefined property: App\Controllers\Approval::$db
+in APPPATH\Controllers\Approval.php on line 54.
+ 1 APPPATH\Controllers\Approval.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Approval::$db', 'APPPATH\\Controllers\\Approval.php', 54, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Approval->InsertData()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Approval))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 14:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:49:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 14:57:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 15:03:52 --> Undefined index: approved
+in APPPATH\Views\admin\v_eksekusi.php on line 62.
+ 1 APPPATH\Views\admin\v_eksekusi.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: approved', 'APPPATH\\Views\\admin\\v_eksekusi.php', 62, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_eksekusi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_eksekusi', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_eksekusi')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Eksekusi.php(36): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 15:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-20 15:04:38 --> Undefined index: approved
+in APPPATH\Views\admin\v_eksekusi.php on line 62.
+ 1 APPPATH\Views\admin\v_eksekusi.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: approved', 'APPPATH\\Views\\admin\\v_eksekusi.php', 62, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\v_eksekusi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/v_eksekusi', [], true)
+ 5 APPPATH\Views\v_template.php(420): view('admin/v_eksekusi')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_template.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('v_template', [], true)
+ 9 APPPATH\Controllers\Eksekusi.php(36): view('v_template', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Eksekusi->index()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Eksekusi))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2025-04-20 15:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:16:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:17:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:27:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:29:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:36:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:39:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:40:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:40:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:43:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:44:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:44:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:44:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-20 15:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

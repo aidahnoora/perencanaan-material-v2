@@ -25,6 +25,7 @@
                         <tr class="text-center">
                             <th width="50px">No</th>
                             <th>Material</th>
+                            <th>Supplier</th>
                             <th>Current Stock</th>
                             <th>Allocated Qty</th>
                             <th>Warehouse Location</th>
@@ -39,6 +40,7 @@
                             <tr>
                                 <td class="text-center"><?= $no++ ?></td>
                                 <td><?= $value['material_name'] ?></td>
+                                <td><?= $value['supplier_name'] ?></td>
                                 <td class="text-center"><?= $value['current_stock'] ?></td>
                                 <td class="text-center"><?= $value['allocated_qty'] ?></td>
                                 <td class="text-center"><?= $value['warehouse_location'] ?></td>
@@ -78,6 +80,18 @@
                             <option value="">--Pilih Material--</option>
                             <?php foreach ($materials as $key => $material) { ?>
                                 <option value="<?= $material['id_material'] ?>"><?= $material['material_name'] ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col mb-3">
+                        <label for="" class="form-label">Supplier</label>
+                        <select name="supplier_id" class="form-control">
+                            <option value="">--Pilih Supplier--</option>
+                            <?php foreach ($suppliers as $key => $supplier) { ?>
+                                <option value="<?= $supplier['id_supplier'] ?>"><?= $supplier['supplier_name'] ?></option>
                             <?php } ?>
                         </select>
                     </div>
@@ -150,6 +164,18 @@
                                 <option value="">--Pilih Material--</option>
                                 <?php foreach ($materials as $key => $m) { ?>
                                     <option value="<?= $m['id_material'] ?>" <?= $value['material_id'] == $m['id_material'] ? 'selected' : '' ?>><?= $m['material_name'] ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="" class="form-label">Supplier</label>
+                            <select name="supplier_id" class="form-control">
+                                <option value="">--Pilih supplier--</option>
+                                <?php foreach ($suppliers as $key => $m) { ?>
+                                    <option value="<?= $m['id_supplier'] ?>" <?= $value['supplier_id'] == $m['id_supplier'] ? 'selected' : '' ?>><?= $m['supplier_name'] ?></option>
                                 <?php } ?>
                             </select>
                         </div>

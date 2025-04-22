@@ -8,7 +8,19 @@ class ModelMaterial extends Model
 {
     protected $table = 'materials'; 
     protected $primaryKey = 'id_material';
-    protected $allowedFields = ['material_code', 'material_name', 'material_spec', 'material_type', 'grade', 'standard_cost', 'bom', 'standard_cost', 'max_stock'];
+    protected $allowedFields = [
+        'material_code', 
+        'material_name', 
+        'material_spec', 
+        'material_type', 
+        'grade', 
+        'standard_cost', 
+        'bom', 
+        'standard_cost', 
+        'max_stock',
+        'type',
+        'source_process_step_id'
+    ];
 
     public function AllData()
     {

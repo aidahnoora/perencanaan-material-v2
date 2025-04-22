@@ -142,7 +142,8 @@
 
                         <div class="form-group">
                             <label for="">BOM</label>
-                            <input type="text" name="bom" class="form-control" placeholder="BOM" required>
+                            <input type="text" name="bom" class="form-control" value="Raw" readonly>
+                            <input type="hidden" name="type" value="raw">
                         </div>
 
                         <div class="form-group">
@@ -228,7 +229,7 @@
 
                             <div class="form-group">
                                 <label for="">BOM</label>
-                                <input type="text" name="bom" class="form-control" value="<?= $value['bom'] ?>" required>
+                                <input type="text" name="bom" class="form-control" value="<?= $value['bom'] ?>" readonly>
                             </div>
 
                             <div class="form-group">
@@ -253,7 +254,7 @@
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Tutup</button>
                     <button type="submit" class="btn btn-warning btn-flat">Update</button>
                 </div>
                 <?php echo form_close() ?>

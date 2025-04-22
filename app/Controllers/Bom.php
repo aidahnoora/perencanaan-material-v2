@@ -23,12 +23,36 @@ class Bom extends BaseController
         $this->ModelMaterial = new ModelMaterial();
     }
 
-    public function index()
+    public function index($step_id = null)
     {
-        $boms = $this->ModelBom->AllData();
+        if ($step_id !== null) {
+            $boms = $this->ModelBom->getByStep($step_id);
+        } else {
+            $boms = $this->ModelBom->findAll();
+        }
 
         foreach ($boms as &$bom) {
             $bom['bom_details'] = $this->ModelBomDetail->getBomDetailsByBomId($bom['id_bom']);
+        }
+
+        // Tentukan view sesuai tahap
+        $viewMap = [
+            1 => 'admin/v_bom_tahap1',
+            2 => 'admin/v_bom_tahap2',
+            3 => 'admin/v_bom_tahap3',
+            4 => 'admin/v_bom_tahap4',
+        ];
+
+        // Filter material berdasarkan step_id
+        $materialTypes = ['raw'];
+        if ($step_id >= 2) $materialTypes[] = 'tahap1';
+        if ($step_id >= 3) $materialTypes[] = 'tahap2';
+        if ($step_id >= 4) $materialTypes[] = 'tahap3';
+
+        if ($step_id !== null) {
+            $materials = $this->ModelMaterial->whereIn('type', $materialTypes)->findAll();
+        } else {
+            $materials = $this->ModelMaterial->findAll(); // default semua jika tidak ada step
         }
 
         $data = [
@@ -36,9 +60,9 @@ class Bom extends BaseController
             'subjudul' => '',
             'menu' => 'bom',
             'submenu' => '',
-            'page' => 'admin/v_bom',
+            'page' => $step_id && isset($viewMap[$step_id]) ? $viewMap[$step_id] : 'admin/v_bom',
             'products' => $this->ModelProduk->AllData(),
-            'materials' => $this->ModelMaterial->AllData(),
+            'materials' => $materials,
             'boms' => $boms,
         ];
 
@@ -47,17 +71,11 @@ class Bom extends BaseController
 
     public function InsertData()
     {
-        // if (!$this->validate([
-        //     'product_id' => 'required',
-        //     'materials'  => 'required',
-        //     'quantities' => 'required'
-        // ])) {
-        //     return redirect()->to('Bom')->withInput()->with('errors', $this->validator->getErrors());
-        // }
-
+        $step_id = $this->request->getPost('process_step_id');
         // Insert data BOM
         $dataBom = [
             'product_id' => $this->request->getPost('product_id'),
+            'process_step_id' => $step_id,
             'bom_code' => $this->request->getPost('bom_code'),
             'effective_date' => $this->request->getPost('effective_date'),
             'bom_version' => $this->request->getPost('bom_version'),
@@ -86,12 +104,11 @@ class Bom extends BaseController
         $this->ModelBomDetail->insertBatch($dataBomDetails);
 
         session()->setFlashdata('pesan', 'Data BOM dan BOM Detail Berhasil Ditambahkan!');
-        return redirect()->to('Bom');
+        return redirect()->to('Bom/index/' . $step_id);
     }
 
-    public function UpdateData($id)
+    public function UpdateData($id, $step_id)
     {
-        // Validasi (Opsional)
         if (!$this->validate([
             'product_id' => 'required',
             'material_id'  => 'required',
@@ -99,7 +116,7 @@ class Bom extends BaseController
             'level' => 'required',
             'proces_notes' => 'required',
         ])) {
-            return redirect()->to('Bom')->withInput()->with('errors', $this->validator->getErrors());
+            return redirect()->to('Bom/index/' . $step_id)->withInput()->with('errors', $this->validator->getErrors());
         }
 
         // Update data BOM
@@ -110,19 +127,18 @@ class Bom extends BaseController
             'bom_version' => $this->request->getPost('bom_version'),
             'approved_by' => $this->request->getPost('approved_by'),
             'notes' => $this->request->getPost('notes'),
+            'process_step_id' => $step_id,
         ];
         $this->ModelBom->update($id, $dataBom);
 
-        // Hapus detail lama
+        // Hapus dan masukkan kembali detail
         $this->ModelBomDetail->where('bom_id', $id)->delete();
 
-        // Ambil data dari form
-        $materials = $this->request->getPost('material_id');  // Sesuai dengan modal edit
-        $quantities = $this->request->getPost('quantity_needed');  // Sesuai dengan modal edit
+        $materials = $this->request->getPost('material_id');
+        $quantities = $this->request->getPost('quantity_needed');
         $levels = $this->request->getPost('level');
         $proces_notes = $this->request->getPost('proces_notes');
 
-        // Simpan detail BOM baru
         $dataBomDetails = [];
         foreach ($materials as $key => $material_id) {
             $dataBomDetails[] = [
@@ -139,16 +155,16 @@ class Bom extends BaseController
         }
 
         session()->setFlashdata('pesan', 'Data BOM dan BOM Detail Berhasil Diperbarui!');
-        return redirect()->to('Bom');
+        return redirect()->to('Bom/index/' . $step_id);
     }
 
-    public function DeleteData($id)
+
+    public function DeleteData($id, $step_id)
     {
-        // Hapus detail dulu baru hapus BOM utama
         $this->ModelBomDetail->where('bom_id', $id)->delete();
         $this->ModelBom->delete($id);
 
         session()->setFlashdata('pesan', 'Data BOM Berhasil Dihapus!');
-        return redirect()->to('Bom');
+        return redirect()->to('Bom/index/' . $step_id);
     }
 }
