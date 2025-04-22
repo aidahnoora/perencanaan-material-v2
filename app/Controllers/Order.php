@@ -82,11 +82,7 @@ class Order extends BaseController
                 'production_order_id' => $orderId,
                 'material_id' => $material['material_id'],
                 'gross_requirement' => $material['gross_requirement'],
-                'qty_buffer' => $material['gross_requirement'] + ($material['gross_requirement'] * 20 / 100),
-            ]);
-
-            $this->ModelStruktur->update($material['id_material_requirement'], [
-                'qty_buffer' => $material['gross_requirement'] + ($material['gross_requirement'] * 20 / 100),
+                'qty_buffer' => $material['qty_buffer']
             ]);
         }
 

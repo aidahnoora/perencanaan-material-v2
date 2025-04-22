@@ -79,7 +79,7 @@
                                 </td> -->
                                 <td class="text-center">
                                     <button class="btn btn-warning btn-sm btn-flat" data-toggle="modal" data-target="#edit-data<?= $value['id_material'] ?>"><i class="fas fa-pencil-alt"></i></button>
-                                    <button class="btn btn-danger btn-sm btn-flat" data-toggle="modal" data-target="#delete-data<?= $value['id_material'] ?>"><i class="fas fa-trash"></i></button>
+                                    <!-- <button class="btn btn-danger btn-sm btn-flat" data-toggle="modal" data-target="#delete-data<?= $value['id_material'] ?>"><i class="fas fa-trash"></i></button> -->
                                 </td>
                             </tr>
                         <?php } ?>

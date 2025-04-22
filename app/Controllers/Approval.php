@@ -91,13 +91,26 @@ class Approval extends BaseController
                             'status_order' => 'completed'
                         ]);
 
-                    // Update production_plannings -> order_log
-                    $db->table('production_plannings')
+                    $planning = $db->table('production_plannings')
                         ->where('id', $order->production_planning_id)
-                        ->update([
-                            'order_log' => 'completed',
-                            // 'status_production' => 'completed',
-                        ]);
+                        ->get()
+                        ->getRow();
+
+                    // Update production_plannings -> order_log
+                    if ($planning->process_step_log == 4) {
+                        $db->table('production_plannings')
+                            ->where('id', $order->production_planning_id)
+                            ->update([
+                                'order_log' => 'completed',
+                                'status_production' => 'completed',
+                            ]);
+                    } else {
+                        $db->table('production_plannings')
+                            ->where('id', $order->production_planning_id)
+                            ->update([
+                                'order_log' => 'completed',
+                            ]);
+                    }
                 }
             }
 
@@ -105,19 +118,6 @@ class Approval extends BaseController
                 ->where('id_material', $row->material_id)
                 ->set('max_stock', 'max_stock + ' . (int)$data['approved_qty'], false)
                 ->update();
-
-            $mate = $db->table('execution_materials')
-                ->select('production_execution_id, material_id, qty_used')
-                ->where('production_execution_id', $row->production_execution_id)
-                ->get()
-                ->getRowArray();
-
-            if ($mate) {
-                $db->table('materials')
-                    ->where('id_material', $mate['material_id'])
-                    ->set('max_stock', 'max_stock - ' . (int)$mate['qty_used'], false)
-                    ->update();
-            }
         }
 
         session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan!');

@@ -138,7 +138,7 @@
                                                         <input type="text" class="form-control" placeholder="<?= $detail['material_name'] ?>" readonly>
                                                     </td>
                                                     <td>
-                                                        <input type="number" name="qty_used[]" class="form-control" value="<?= $detail['final_qty'] ?? $detail['gross_requirement'] ?>" required>
+                                                        <input type="number" name="qty_used[]" class="form-control" value="<?= $production['target_qty'] ?? $detail['gross_requirement'] ?>" required>
                                                     </td>
                                                     <td>
                                                         <input type="text" name="source_type[]" class="form-control" value="material" readonly>

@@ -252,6 +252,14 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a href="<?= base_url('Laporan/laporanRealisasi') ?>" class="nav-link <?= $menu == 'laporanRealisasi' ? 'active' : '' ?>">
+                                    <i class="far fa-folder nav-icon"></i>
+                                    <p>
+                                        Laporan Realisasi
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="<?= base_url('User') ?>" class="nav-link <?= $menu == 'user' ? 'active' : '' ?>">
                                     <i class="nav-icon fas fa-id-card"></i>
                                     <p>

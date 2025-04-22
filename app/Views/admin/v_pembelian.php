@@ -27,7 +27,6 @@
                             <th>Material</th>
                             <th>Supplier</th>
                             <th>Current Stock</th>
-                            <th>Allocated Qty</th>
                             <th>Warehouse Location</th>
                             <th>Batch Number</th>
                             <th>Last Update</th>
@@ -42,7 +41,6 @@
                                 <td><?= $value['material_name'] ?></td>
                                 <td><?= $value['supplier_name'] ?></td>
                                 <td class="text-center"><?= $value['current_stock'] ?></td>
-                                <td class="text-center"><?= $value['allocated_qty'] ?></td>
                                 <td class="text-center"><?= $value['warehouse_location'] ?></td>
                                 <td class="text-center"><?= $value['batch_number'] ?></td>
                                 <td class="text-center"><?= date('d-m-Y', strtotime($value['last_update'])) ?></td>
@@ -101,13 +99,6 @@
                     <div class="col mb-3">
                         <label for="" class="form-label">Current Stock</label>
                         <input name="current_stock" class="form-control" placeholder="Current Stock" required>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col mb-3">
-                        <label for="" class="form-label">Allocated Qty</label>
-                        <input name="allocated_qty" class="form-control" placeholder="Allocated Qty" required>
                     </div>
                 </div>
 
@@ -185,13 +176,6 @@
                         <div class="col mb-3">
                             <label for="" class="form-label">Current Stock</label>
                             <input name="current_stock" value="<?= $value['current_stock'] ?>" class="form-control" placeholder="Current Stock" required>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col mb-3">
-                            <label for="" class="form-label">Allocated Qty</label>
-                            <input name="allocated_qty" value="<?= $value['allocated_qty'] ?>" class="form-control" placeholder="Allocated Qty" required>
                         </div>
                     </div>
 

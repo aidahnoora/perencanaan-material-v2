@@ -159,25 +159,28 @@
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">
-                        <?= $production['product_name'] ?>
-                    </h4>
+                    <h5 class="modal-title">
+                        Produk : <?= $production['product_name'] ?> <br>
+                        Hasil yang Diharapkan : <?= $production['quality'] ?>
+                    </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
 
                 <div class="modal-body">
-                    <h5>Pembahanan</h5>
+                    <h5>Tahap 1 - Pembahanan</h5>
                     <div class="table-responsive">
                         <table class="table table-bordered text-center">
                             <thead>
                                 <tr>
                                     <th>No.</th>
                                     <th>Material</th>
-                                    <th>Qty Dibutuhkan (Gross)</th>
+                                    <th>Need</th>
                                     <th>Stok Tersedia</th>
-                                    <th>Kekurangan (Net)</th>
+                                    <th>Order</th>
+                                    <th>%</th>
+                                    <th>BOM</th>
                                     <th>Status</th>
                                     <th>Perbarui Status & Hitung Ulang</th>
                                 </tr>
@@ -190,7 +193,11 @@
                                         <td class="text-left"><?= $detail['material_name'] ?></td>
                                         <td><?= $detail['gross_requirement'] ?></td>
                                         <td><?= $detail['max_stock'] ?></td>
-                                        <td><?= $detail['net_requirement'] ?></td>
+                                        <td>
+                                            <?= isset($detail['qty_buffer']) ? $detail['qty_buffer'] : '<span class="badge badge-warning">Order Belum Dibuat</span>' ?>
+                                        </td>
+                                        <td class="text-center">20%</td>
+                                        <td class="text-center"><?= $detail['bom'] ?></td>
                                         <td>
                                             <?php if ($detail['status_material_requirement'] == 'pending') : ?>
                                                 <span class="badge bg-secondary">Pending</span>
@@ -215,16 +222,18 @@
                         </table>
                     </div>
 
-                    <h5>Bentuk Dasar</h5>
+                    <h5>Tahap 2 - Bentuk Dasar</h5>
                     <div class="table-responsive">
                         <table class="table table-bordered text-center">
                             <thead>
                                 <tr>
                                     <th>No.</th>
                                     <th>Material</th>
-                                    <th>Qty Dibutuhkan (Gross)</th>
+                                    <th>Need</th>
                                     <th>Stok Tersedia</th>
-                                    <th>Kekurangan (Net)</th>
+                                    <th>Order</th>
+                                    <th>%</th>
+                                    <th>BOM</th>
                                     <th>Status</th>
                                     <th>Perbarui Status & Hitung Ulang</th>
                                 </tr>
@@ -237,7 +246,11 @@
                                         <td class="text-left"><?= $detail['material_name'] ?></td>
                                         <td><?= $detail['gross_requirement'] ?></td>
                                         <td><?= $detail['max_stock'] ?></td>
-                                        <td><?= $detail['net_requirement'] ?></td>
+                                        <td>
+                                            <?= isset($detail['qty_buffer']) ? $detail['qty_buffer'] : '<span class="badge badge-warning">Order Belum Dibuat</span>' ?>
+                                        </td>
+                                        <td class="text-center">20%</td>
+                                        <td class="text-center"><?= $detail['bom'] ?></td>
                                         <td>
                                             <?php if ($detail['status_material_requirement'] == 'pending') : ?>
                                                 <span class="badge bg-secondary">Pending</span>
@@ -262,16 +275,18 @@
                         </table>
                     </div>
 
-                    <h5>Rakit 1</h5>
+                    <h5>Tahp 3 - Rakit 1</h5>
                     <div class="table-responsive">
                         <table class="table table-bordered text-center">
                             <thead>
                                 <tr>
                                     <th>No.</th>
                                     <th>Material</th>
-                                    <th>Qty Dibutuhkan (Gross)</th>
+                                    <th>Need</th>
                                     <th>Stok Tersedia</th>
-                                    <th>Kekurangan (Net)</th>
+                                    <th>Order</th>
+                                    <th>%</th>
+                                    <th>BOM</th>
                                     <th>Status</th>
                                     <th>Perbarui Status & Hitung Ulang</th>
                                 </tr>
@@ -284,7 +299,11 @@
                                         <td class="text-left"><?= $detail['material_name'] ?></td>
                                         <td><?= $detail['gross_requirement'] ?></td>
                                         <td><?= $detail['max_stock'] ?></td>
-                                        <td><?= $detail['net_requirement'] ?></td>
+                                        <td>
+                                            <?= isset($detail['qty_buffer']) ? $detail['qty_buffer'] : '<span class="badge badge-warning">Order Belum Dibuat</span>' ?>
+                                        </td>
+                                        <td class="text-center">20%</td>
+                                        <td class="text-center"><?= $detail['bom'] ?></td>
                                         <td>
                                             <?php if ($detail['status_material_requirement'] == 'pending') : ?>
                                                 <span class="badge bg-secondary">Pending</span>
@@ -309,16 +328,18 @@
                         </table>
                     </div>
 
-                    <h5>Finishing</h5>
+                    <h5>Tahap 4 - Finishing</h5>
                     <div class="table-responsive">
                         <table class="table table-bordered text-center">
                             <thead>
                                 <tr>
                                     <th>No.</th>
                                     <th>Material</th>
-                                    <th>Qty Dibutuhkan (Gross)</th>
+                                    <th>Need</th>
                                     <th>Stok Tersedia</th>
-                                    <th>Kekurangan (Net)</th>
+                                    <th>Order</th>
+                                    <th>%</th>
+                                    <th>BOM</th>
                                     <th>Status</th>
                                     <th>Perbarui Status & Hitung Ulang</th>
                                 </tr>
@@ -331,7 +352,11 @@
                                         <td class="text-left"><?= $detail['material_name'] ?></td>
                                         <td><?= $detail['gross_requirement'] ?></td>
                                         <td><?= $detail['max_stock'] ?></td>
-                                        <td><?= $detail['net_requirement'] ?></td>
+                                        <td>
+                                            <?= isset($detail['qty_buffer']) ? $detail['qty_buffer'] : '<span class="badge badge-warning">Order Belum Dibuat</span>' ?>
+                                        </td>
+                                        <td class="text-center">20%</td>
+                                        <td class="text-center"><?= $detail['bom'] ?></td>
                                         <td>
                                             <?php if ($detail['status_material_requirement'] == 'pending') : ?>
                                                 <span class="badge bg-secondary">Pending</span>
@@ -371,7 +396,7 @@
                     ?>
                     <!-- CEK BOM ID NING KENE -->
                     <?php if ($allFullfiled) : ?>
-                        <?php if (!empty($production['material_requirements']) && !empty($production['materials2'])) : ?>
+                        <?php if (!empty($production['material_requirements']) && !empty($production['materials2']) && !empty($production['materials3']) && !empty($production['materials4'])) : ?>
                             <?php if ($production['process_step_log'] == '0' && $production['order_log'] == 'inprogress') : ?>
                                 <button class="btn btn-success"
                                     onclick="openOrderProduksiModal(<?= $production['id'] ?>, '<?= $production['bom_id'] ?>', '<?= $production['quality'] ?>', <?= $production['product_id'] ?>)">
@@ -408,7 +433,7 @@
                         <?php endif; ?>
                     <?php else : ?>
                         <button class="btn btn-secondary" disabled>
-                            <i class="fas fa-ban"></i> Bahan Belum Lengkap
+                            <i class="fas fa-ban"></i> Material Mentah Belum Lengkap
                         </button>
                     <?php endif; ?>
 
@@ -459,7 +484,7 @@
                 <div class="row">
                     <div class="col mb-3">
                         <label for="" class="form-label">Target Qty</label>
-                        <input name="target_qty" class="form-control" id="orderQuality" readonly>
+                        <input name="target_qty" class="form-control" id="orderQuality">
                     </div>
                 </div>
 
@@ -515,7 +540,7 @@
                     <div class="row">
                         <div class="col mb-3">
                             <label for="" class="form-label">Target Qty</label>
-                            <input name="target_qty" class="form-control" value="<?= $production['execution_stock']['final_qty'] ?? '' ?>" readonly>
+                            <input name="target_qty" class="form-control" value="<?= $production['execution_stock']['final_qty'] ?? '' ?>">
                             <span>*Final Qty pada Order <?= $production['product_name'] ?> Tahap 1</span>
                         </div>
                     </div>
@@ -573,7 +598,7 @@
                     <div class="row">
                         <div class="col mb-3">
                             <label for="" class="form-label">Target Qty</label>
-                            <input name="target_qty" class="form-control" value="<?= $production['execution_stock']['final_qty'] ?? '' ?>" readonly>
+                            <input name="target_qty" class="form-control" value="<?= $production['execution_stock']['final_qty'] ?? '' ?>">
                             <span>*Final Qty pada Order <?= $production['product_name'] ?> Tahap 2</span>
                         </div>
                     </div>
@@ -631,7 +656,7 @@
                     <div class="row">
                         <div class="col mb-3">
                             <label for="" class="form-label">Target Qty</label>
-                            <input name="target_qty" class="form-control" value="<?= $production['execution_stock']['final_qty'] ?? '' ?>" readonly>
+                            <input name="target_qty" class="form-control" value="<?= $production['execution_stock']['final_qty'] ?? '' ?>">
                             <span>*Final Qty pada Order <?= $production['product_name'] ?> Tahap 3</span>
                         </div>
                     </div>
@@ -679,6 +704,7 @@
             <input type="hidden" name="materials[${index}][material_id]" value="${material.material_id}">
             <input type="hidden" name="materials[${index}][gross_requirement]" value="${material.gross_requirement}">
             <input type="hidden" name="materials[${index}][id_material_requirement]" value="${material.id_material_requirement}">
+            <input type="hidden" name="materials[${index}][qty_buffer]" value="${material.qty_buffer}">
         `;
         });
 
@@ -696,6 +722,7 @@
             <input type="hidden" name="materials[${index}][material_id]" value="${material.material_id}">
             <input type="hidden" name="materials[${index}][gross_requirement]" value="${material.gross_requirement}">
             <input type="hidden" name="materials[${index}][id_material_requirement]" value="${material.id_material_requirement}">
+            <input type="hidden" name="materials[${index}][qty_buffer]" value="${material.qty_buffer}">
         `;
         });
 
@@ -713,6 +740,7 @@
             <input type="hidden" name="materials[${index}][material_id]" value="${material.material_id}">
             <input type="hidden" name="materials[${index}][gross_requirement]" value="${material.gross_requirement}">
             <input type="hidden" name="materials[${index}][id_material_requirement]" value="${material.id_material_requirement}">
+            <input type="hidden" name="materials[${index}][qty_buffer]" value="${material.qty_buffer}">
         `;
         });
 
@@ -730,6 +758,7 @@
             <input type="hidden" name="materials[${index}][material_id]" value="${material.material_id}">
             <input type="hidden" name="materials[${index}][gross_requirement]" value="${material.gross_requirement}">
             <input type="hidden" name="materials[${index}][id_material_requirement]" value="${material.id_material_requirement}">
+            <input type="hidden" name="materials[${index}][qty_buffer]" value="${material.qty_buffer}">
         `;
         });
 

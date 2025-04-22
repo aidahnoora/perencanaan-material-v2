@@ -63,20 +63,30 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            <?php
+            function generateKodeOtomatis()
+            {
+                $tanggal = date('Ymd');
+                $randomNumber = rand(100, 999); // angka acak
+                return 'BOM4-' . $tanggal . $randomNumber;
+            }
+
+            $kodeBaru = generateKodeOtomatis();
+            ?>
             <?= form_open('Bom/InsertData') ?>
             <div class="modal-body">
-                <div class="row">
+            <div class="row">
                     <div class="col-md-6">
-                        <input type="hidden" name="process_step_id" value="4">
+                        <input type="hidden" name="process_step_id" value="1">
                         <div class="mb-3">
                             <label class="form-label">BOM Code</label>
-                            <input name="bom_code" class="form-control" placeholder="BOM Code" required>
+                            <input name="bom_code" class="form-control" value="<?= $kodeBaru ?>" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label class="form-label">BOM Version</label>
-                            <input name="bom_version" class="form-control" placeholder="BOM Version" required>
+                            <input name="bom_version" class="form-control" value="4" readonly>
                         </div>
                     </div>
                 </div>
@@ -136,7 +146,7 @@
                                 <input type="number" name="quantity_needed[]" class="form-control" placeholder="0" required>
                             </td>
                             <td>
-                                <input type="number" name="level[]" class="form-control" placeholder="0" required>
+                                <input type="number" name="level[]" class="form-control" value="4" readonly>
                             </td>
                             <td>
                                 <input type="text" name="proces_notes[]" class="form-control" placeholder="Notes" required>

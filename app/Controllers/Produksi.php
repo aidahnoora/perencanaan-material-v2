@@ -48,7 +48,7 @@ class Produksi extends BaseController
             $production['bom_id_4'] = !empty($production['materials4']) ? $production['materials4'][0]['bom_id'] : null;
 
             $executionStock = $production['execution_stock'] = $this->ModelEksekusiStok->getExecutionStocksByPlanningId($production['id']);
-            
+
             if (!empty($executionStock)) {
                 $production['execution_stocks'] = $executionStock;
             } else {
@@ -136,12 +136,24 @@ class Produksi extends BaseController
                         ->select('material_id, quantity_needed')
                         ->where('bom_id', $bom['id_bom'])
                         ->findAll();
-                
+
                     foreach ($bomDetails as $bomDetail) {
                         $stok = $this->ModelMaterial->find($bomDetail['material_id']);
                         $grossRequirement = $bomDetail['quantity_needed'] * $this->request->getPost('quality');
                         $netRequirement = max(0, $grossRequirement - $stok['max_stock']);
-                
+
+                        // Hitung qty buffer (kebutuhan + 20%)
+                        $needQty = $grossRequirement;
+                        $qtyBuffer = $needQty + ($needQty * 20 / 100);
+
+                        if($stok['max_stock'] < $grossRequirement){
+                            $finalBuffer = $qtyBuffer;
+                        } elseif ($stok > $grossRequirement) {
+                           $finalBuffer = $grossRequirement;
+                        } else {
+                            $finalBuffer = 0;
+                        }
+
                         if ($netRequirement == 0) {
                             $status = 'fullfiled';
                         } elseif ($netRequirement > 0 && $stok['max_stock'] > 0) {
@@ -149,7 +161,7 @@ class Produksi extends BaseController
                         } else {
                             $status = 'pending';
                         }
-                
+
                         $this->ModelStruktur->insert([
                             'production_planning_id' => $productionId,
                             'material_id' => $bomDetail['material_id'],
@@ -158,9 +170,10 @@ class Produksi extends BaseController
                             'status_material_requirement' => $status,
                             'bom_id' => $bom['id_bom'],
                             'process_step_id' => $bom['process_step_id'],
+                            'qty_buffer' => $finalBuffer,
                         ]);
                     }
-                }                
+                }
 
                 $db->transComplete();
 

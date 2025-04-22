@@ -21,7 +21,7 @@ class ModelStruktur extends Model
 
     public function getMaterialRequirementByProductionId($production_planning_id, $status = null)
     {
-        $builder = $this->select('material_requirements.*, materials.material_name, materials.max_stock')
+        $builder = $this->select('material_requirements.*, materials.material_name, materials.bom, materials.max_stock')
             ->join('materials', 'materials.id_material = material_requirements.material_id', 'left')
             ->where('material_requirements.production_planning_id', $production_planning_id);
 
