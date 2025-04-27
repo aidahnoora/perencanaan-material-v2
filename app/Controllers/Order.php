@@ -30,6 +30,7 @@ class Order extends BaseController
         foreach ($production_orders as &$order) {
             $order['production_order_details'] = $this->ModelOrderDetail->getOrderDetailsByOrderId($order['id_production_order']);
             $order['outputs'] = $this->ModelMaterial->where('source_process_step_id', $order['process_step_id'])->findAll();
+            $order['getHasil'] = $this->ModelStruktur->where('material_id =', $order['material_hasil_id'])->findAll();
         }
 
         $data = [
@@ -52,41 +53,38 @@ class Order extends BaseController
 
         try {
             $data = [
-            'production_planning_id' => $this->request->getPost('production_planning_id'),
-            'bom_id' => $this->request->getPost('bom_id'),
-            'product_id' => $this->request->getPost('productId'),
-            'user_id' => $session->get('id_user'),
-            'process_step_id' => 1,
-            'order_number' => $this->request->getPost('order_number'),
-            'planned_date_order' => $this->request->getPost('planned_date_order'),
-            'target_qty' => $this->request->getPost('target_qty'),
-            'status_order' => 'planned',
-            'notes_order' => $this->request->getPost('notes_order'),
-        ];
+                'production_planning_id' => $this->request->getPost('production_planning_id'),
+                'bom_id' => $this->request->getPost('bom_id'),
+                'product_id' => $this->request->getPost('productId'),
+                'user_id' => $session->get('id_user'),
+                'process_step_id' => 1,
+                'order_number' => $this->request->getPost('order_number'),
+                'planned_date_order' => $this->request->getPost('planned_date_order'),
+                'target_qty' => $this->request->getPost('target_qty'),
+                'status_order' => 'planned',
+                'notes_order' => $this->request->getPost('notes_order'),
+            ];
 
-        // Simpan order produksi utama
-        $this->ModelOrderProduksi->insert($data);
-        $orderId = $this->ModelOrderProduksi->insertID();
+            $this->ModelOrderProduksi->insert($data);
+            $orderId = $this->ModelOrderProduksi->insertID();
 
-        // Ubah status_production menjadi 'inprogress'
-        $db->table('production_plannings')
-            ->where('id', $data['production_planning_id'])
-            ->update([
-                'status_production' => 'inprogress',
-                'process_step_log' => '1',
-            ]);
+            $db->table('production_plannings')
+                ->where('id', $data['production_planning_id'])
+                ->update([
+                    'status_production' => 'inprogress',
+                    'process_step_log' => '1',
+                ]);
 
-        // Simpan detail material requirements
-        foreach ($materials as $material) {
-            $this->ModelOrderDetail->insert([
-                'production_order_id' => $orderId,
-                'material_id' => $material['material_id'],
-                'gross_requirement' => $material['gross_requirement'],
-                'qty_buffer' => $material['qty_buffer']
-            ]);
-        }
+            foreach ($materials as $material) {
+                $this->ModelOrderDetail->insert([
+                    'production_order_id' => $orderId,
+                    'material_id' => $material['material_id'],
+                    'gross_requirement' => $material['gross_requirement'],
+                    'qty_buffer' => $material['qty_buffer']
+                ]);
+            }
 
-        $db->transComplete();
+            $db->transComplete();
 
             if ($db->transStatus() === false) {
                 throw new \Exception("Transaksi gagal");
@@ -155,7 +153,7 @@ class Order extends BaseController
                 $lastQuery = $db->getLastQuery();
                 log_message('error', 'Transaksi gagal. Query terakhir: ' . $lastQuery);
                 throw new \Exception("Transaksi gagal. Cek log untuk detail.");
-            }            
+            }
 
             session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan!');
         } catch (\Throwable $e) {
@@ -230,7 +228,7 @@ class Order extends BaseController
 
         return redirect()->to('Produksi');
     }
-    
+
     public function InsertOrderTahap4()
     {
         $session = session();

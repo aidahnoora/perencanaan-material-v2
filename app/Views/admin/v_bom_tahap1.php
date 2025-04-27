@@ -23,7 +23,8 @@
                             <th width="50px">No</th>
                             <th>Proses Produksi</th>
                             <th>BOM Code</th>
-                            <th>Product Name</th>
+                            <th>Produk Jadi</th>
+                            <th>Material Hasil</th>
                             <th>Effective Date</th>
                             <th>Total Material</th>
                             <th width="150px">Aksi</th>
@@ -36,7 +37,8 @@
                                 <td class="text-center"><?= $no++ ?></td>
                                 <td><?= $bom['step_name'] ?></td>
                                 <td><?= $bom['bom_code'] ?></td>
-                                <td><?= $bom['product_name'] ?> - <?= $bom['step_name'] ?></td>
+                                <td><?= $bom['product_name'] ?></td>
+                                <td><?= $bom['material_name'] ?></td>
                                 <td class="text-center"><?= date('d-m-Y', strtotime($bom['effective_date'])) ?></td>
                                 <td class="text-center"><?= count($bom['bom_details']) ?></td>
                                 <td class="text-center">
@@ -93,12 +95,22 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <!-- list dari hasil tahap 2 -->
-                    <label class="form-label">Product</label>
+                    <!-- produk jadi -->
+                    <label class="form-label">Produk Jadi</label>
                     <select name="product_id" class="form-control" required>
                         <option value="">-- Select Product --</option>
                         <?php foreach ($products as $product) : ?>
                             <option value="<?= $product['id_product'] ?>"><?= $product['product_name'] ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <!-- list dari hasil tahap 2 -->
+                    <label class="form-label">Material yang Dihasilkan (Hasil Proses Produksi) </label>
+                    <select name="material_hasil_id" class="form-control" required>
+                        <option value="">-- Select Material --</option>
+                        <?php foreach ($materialhasils as $materialhasil) : ?>
+                            <option value="<?= $materialhasil['id_material'] ?>"><?= $materialhasil['material_name'] ?> (<?= $materialhasil['bom'] ?>)</option>
                         <?php endforeach; ?>
                     </select>
                 </div>
@@ -178,7 +190,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Detail BOM: <?= $bom['product_name'] ?></h4>
+                    <h5 class="modal-title">Detail BOM <br>Produk: <?= $bom['product_name'] ?> <br> Material Hasil: <?= $bom['material_name'] ?> <br>Tahap: <?= $bom['step_name'] ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -244,13 +256,23 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Product</label>
+                        <label class="form-label">Produk Jadi</label>
                         <select name="product_id" class="form-control" required>
                             <option value="">-- Select Product --</option>
                             <?php foreach ($products as $product) : ?>
                                 <option value="<?= $product['id_product'] ?>" <?= $bom['product_id'] == $product['id_product'] ? 'selected' : '' ?>>
                                     <?= $product['product_name'] ?>
                                 </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <!-- list dari hasil tahap 2 -->
+                        <label class="form-label">Material yang Dihasilkan (Hasil Proses Produksi) </label>
+                        <select name="material_hasil_id" class="form-control" required>
+                            <option value="">-- Select Material --</option>
+                            <?php foreach ($materialhasils as $materialhasil) : ?>
+                                <option value="<?= $materialhasil['id_material'] ?>" <?= $materialhasil['id_material'] == $bom['material_hasil_id'] ? 'selected' : '' ?>><?= $materialhasil['material_name'] ?> (<?= $materialhasil['bom'] ?>)</option>
                             <?php endforeach; ?>
                         </select>
                     </div>
@@ -363,7 +385,7 @@
                         <input type="number" name="quantity_needed[]" class="form-control" placeholder="0" required>
                     </td>
                     <td>
-                        <input type="number" name="level[]" class="form-control" placeholder="0" required>
+                        <input type="number" name="level[]" class="form-control" value="1" readonly>
                     </td>
                     <td>
                          <input type="text" name="proces_notes[]" class="form-control" placeholder="Notes" required>

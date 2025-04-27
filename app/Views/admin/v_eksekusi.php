@@ -136,8 +136,10 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col mb-3">
-                            <input type="hidden" name="execution_stock_id" value="<?= $production['execution_stock']['id_execution_stock'] ?>">
-                            <input type="hidden" name="approved_qty" value="<?= $production['execution_stock']['qty_produced'] ?>">
+                            <?php foreach ($production['execution_stocks'] as $fck) : ?>
+                                <input type="hidden" name="execution_stock_id[]" value="<?= $fck['id_execution_stock'] ?>">
+                                <input type="hidden" name="approved_qty[]" value="<?= $fck['qty_produced'] ?>">
+                            <?php endforeach; ?>
 
                             <div class="table-responsive">
                                 <table>

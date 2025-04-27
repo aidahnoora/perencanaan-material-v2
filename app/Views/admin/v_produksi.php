@@ -126,8 +126,8 @@
                                 <label for="">Status</label>
                                 <select name="status_production" class="form-control" required>
                                     <option value="planned" selected>Planned</option>
-                                    <option value="inprogress">In Progress</option>
-                                    <option value="completed">Completed</option>
+                                    <!-- <option value="inprogress">In Progress</option>
+                                    <option value="completed">Completed</option> -->
                                 </select>
                             </div>
                         </div>

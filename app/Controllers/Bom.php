@@ -28,7 +28,7 @@ class Bom extends BaseController
         if ($step_id !== null) {
             $boms = $this->ModelBom->getByStep($step_id);
         } else {
-            $boms = $this->ModelBom->findAll();
+            $boms = $this->ModelBom->AllData();
         }
 
         foreach ($boms as &$bom) {
@@ -51,9 +51,12 @@ class Bom extends BaseController
 
         if ($step_id !== null) {
             $materials = $this->ModelMaterial->whereIn('type', $materialTypes)->findAll();
+            $materialhasils = $this->ModelMaterial->where('source_process_step_id', $step_id)->findAll();
         } else {
             $materials = $this->ModelMaterial->findAll(); // default semua jika tidak ada step
+            $materialhasils = null;
         }
+
 
         $data = [
             'judul' => 'BOM',
@@ -63,6 +66,7 @@ class Bom extends BaseController
             'page' => $step_id && isset($viewMap[$step_id]) ? $viewMap[$step_id] : 'admin/v_bom',
             'products' => $this->ModelProduk->AllData(),
             'materials' => $materials,
+            'materialhasils' => $materialhasils,
             'boms' => $boms,
         ];
 
@@ -75,6 +79,7 @@ class Bom extends BaseController
         // Insert data BOM
         $dataBom = [
             'product_id' => $this->request->getPost('product_id'),
+            'material_hasil_id' => $this->request->getPost('material_hasil_id'),
             'process_step_id' => $step_id,
             'bom_code' => $this->request->getPost('bom_code'),
             'effective_date' => $this->request->getPost('effective_date'),
@@ -122,6 +127,7 @@ class Bom extends BaseController
         // Update data BOM
         $dataBom = [
             'product_id' => $this->request->getPost('product_id'),
+            'material_hasil_id' => $this->request->getPost('material_hasil_id'),
             'bom_code' => $this->request->getPost('bom_code'),
             'effective_date' => $this->request->getPost('effective_date'),
             'bom_version' => $this->request->getPost('bom_version'),

@@ -23,6 +23,7 @@ class Eksekusi extends BaseController
 
         foreach ($production_executions as &$execution) {
             $execution['execution_stock'] = $this->ModelEksekusiStok->getSingleStockByExecutionId($execution['id_production_execution']);
+            $execution['execution_stocks'] = $this->ModelEksekusiStok->getExecutionStocksByExecutionId($execution['id_production_execution']);
 
             // dd($execution['execution_stock']);
         }
@@ -88,22 +89,25 @@ class Eksekusi extends BaseController
                     ->update();
             }
 
-            $output_id = $this->request->getPost('output_id');
+            $output_ids = $this->request->getPost('output_id'); // array
+            $qty_produced = $this->request->getPost('qty_produced'); // array
 
-            if (!empty($output_id)) {
-                $material = $db->table('materials')->where('id_material', $output_id)->get()->getRow();
+            if (!empty($output_ids)) {
+                foreach ($output_ids as $index => $id) {
+                    $material = $db->table('materials')->where('id_material', $id)->get()->getRow();
 
-                $output_data = [
-                    'production_execution_id' => $execution_id,
-                    'process_step_id' => $this->request->getPost('process_step_id'),
-                    'material_id' => $output_id,
-                    'name' => $material->material_name ?? '-',
-                    'qty_produced' => $this->request->getPost('qty_produced'),
-                    'status' => 'pending',
-                    'production_planning_id' => $this->request->getPost('production_planning_id'),
-                ];
+                    $output_data = [
+                        'production_execution_id' => $execution_id,
+                        'process_step_id' => $this->request->getPost('process_step_id'),
+                        'material_id' => $id,
+                        'name' => $material->material_name ?? '-',
+                        'qty_produced' => $qty_produced[$index] ?? 0,
+                        'status' => 'pending',
+                        'production_planning_id' => $this->request->getPost('production_planning_id'),
+                    ];
 
-                $this->ModelEksekusiProduksi->InsertOutputData($output_data);
+                    $this->ModelEksekusiProduksi->InsertOutputData($output_data);
+                }
             }
 
             $db->table('production_orders')
@@ -144,43 +148,52 @@ class Eksekusi extends BaseController
     {
         $session = session();
         $db = \Config\Database::connect();
-
-        $data = [
-            'execution_stock_id' => $this->request->getPost('execution_stock_id'),
-            'user_id' => $session->get('id_user'),
-            'role' => 'spv',
-            'approved_qty' => $this->request->getPost('approved_qty'),
-            'rejected_qty' => 0,
-            'notes_approval' => 'Pengajuan Realisasi',
-            'approve_at' => date('Y-m-d H:i:s'),
-        ];
-
-        $this->ModelEksekusiProduksi->InsertApproval($data);
-
-        // Update status approved di execution_stocks
-        $db->table('execution_stocks')
-            ->where('id_execution_stock', $data['execution_stock_id'])
-            ->update([
-                'approved' => true
-            ]);
-
-        // Ambil production_execution_id dari execution_stocks
-        $row = $db->table('execution_stocks')
-            ->select('production_execution_id')
-            ->where('id_execution_stock', $data['execution_stock_id'])
-            ->get()
-            ->getRow();
-
-        // Update status_execution di production_executions
-        if ($row) {
-            $db->table('production_executions')
-                ->where('id_production_execution', $row->production_execution_id)
-                ->update([
-                    'status_execution' => 'awaiting_approval'
-                ]);
+        $db->transStart();
+    
+        $execution_stock_ids = $this->request->getPost('execution_stock_id');
+        $approved_qtys = $this->request->getPost('approved_qty');
+    
+        foreach ($execution_stock_ids as $index => $execution_stock_id) {
+            $data = [
+                'execution_stock_id' => $execution_stock_id,
+                'user_id' => $session->get('id_user'),
+                'role' => 'spv',
+                'approved_qty' => $approved_qtys[$index] ?? 0,
+                'rejected_qty' => 0,
+                'notes_approval' => 'Pengajuan Realisasi',
+                'approve_at' => date('Y-m-d H:i:s'),
+            ];
+    
+            $this->ModelEksekusiProduksi->InsertApproval($data);
+    
+            // Update status approved di execution_stocks
+            $db->table('execution_stocks')
+                ->where('id_execution_stock', $execution_stock_id)
+                ->update(['approved' => true]);
+    
+            // Ambil production_execution_id
+            $row = $db->table('execution_stocks')
+                ->select('production_execution_id')
+                ->where('id_execution_stock', $execution_stock_id)
+                ->get()
+                ->getRow();
+    
+            if ($row) {
+                $db->table('production_executions')
+                    ->where('id_production_execution', $row->production_execution_id)
+                    ->update(['status_execution' => 'awaiting_approval']);
+            }
         }
-
-        session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan!');
+    
+        $db->transComplete();
+    
+        if ($db->transStatus() === false) {
+            session()->setFlashdata('errors', ['Terjadi kesalahan saat menyimpan data.']);
+        } else {
+            session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan!');
+        }
+    
         return redirect()->to(base_url('Eksekusi'));
     }
+    
 }

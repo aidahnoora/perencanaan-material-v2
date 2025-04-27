@@ -25,6 +25,7 @@ class ModelOrderProduksi extends Model
     {
         return $this->db->table('production_orders')
             ->join('products', 'products.id_product = production_orders.product_id')
+            ->join('boms', 'boms.id_bom=production_orders.bom_id')
             ->join('process_steps', 'process_steps.id_process_step=production_orders.process_step_id')
             ->get()
             ->getResultArray();

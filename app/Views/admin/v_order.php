@@ -82,7 +82,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">
-                        <?= $production['product_name'] ?>
+                        <?= $production['product_name'] ?> - Order <?= $production['step_name'] ?>
                     </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -97,7 +97,7 @@
                     <input type="hidden" name="status_execution" value="inprogress">
 
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="row">
                                 <div class="col mb-3">
                                     <label for="" class="form-label">Mulai</label>
@@ -117,32 +117,34 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <div class="row">
                                 <div class="col mb-3">
                                     <label for="" class="form-label">Input Material</label>
                                     <table class="table table-bordered">
                                         <thead>
                                             <tr class="text-center">
+                                                <th>No.</th>
                                                 <th>Material</th>
-                                                <th>Qty Pakai</th>
-                                                <th>Source</th>
+                                                <th>Qty Pakai (Diambil dari Qty Buffer)</th>
+                                                <!-- <th>Source</th> -->
                                             </tr>
                                         </thead>
                                         <tbody id="edit-bom-details-">
                                             <?php $no = 1; ?>
                                             <?php foreach ($production['production_order_details'] as $detail) : ?>
                                                 <tr>
+                                                    <td class="text-center"><?= $no++ ?></td>
                                                     <td>
                                                         <input type="hidden" name="material_id[]" value="<?= $detail['material_id'] ?>">
                                                         <input type="text" class="form-control" placeholder="<?= $detail['material_name'] ?>" readonly>
                                                     </td>
                                                     <td>
-                                                        <input type="number" name="qty_used[]" class="form-control" value="<?= $production['target_qty'] ?? $detail['gross_requirement'] ?>" required>
+                                                        <input type="number" name="qty_used[]" class="form-control" value="<?= $detail['qty_buffer'] ?>" required>
                                                     </td>
-                                                    <td>
-                                                        <input type="text" name="source_type[]" class="form-control" value="material" readonly>
-                                                    </td>
+                                                    <!-- <td> -->
+                                                    <input type="hidden" name="source_type[]" class="form-control" value="material">
+                                                    <!-- </td> -->
                                                 </tr>
                                             <?php endforeach; ?>
                                         </tbody>
@@ -151,18 +153,26 @@
                             </div>
                         </div>
 
-                        <input type="hidden" name="qty_produced" value="<?= $production['target_qty'] ?>">
-
                         <div class="col-md-4">
                             <div class="row">
                                 <div class="col mb-3">
                                     <label for="" class="form-label">Output Tahap <?= $production['step_order'] ?></label>
-                                    <select name="output_id" class="form-control" required>
+                                    <!-- <select name="output_id" class="form-control" required>
                                         <option value="">-- Select Material Output--</option>
                                         <?php foreach ($production['outputs'] as $key => $value) { ?>
                                             <option value="<?= $value['id_material'] ?>"><?= $value['material_name'] ?></option>
                                         <?php } ?>
-                                    </select>
+                                        <input type="hidden" name="qty_produced" value="<?= $production['target_qty'] ?>">
+                                    </select> -->
+                                    <?php foreach ($production['outputs'] as $index => $hasil) : ?>
+                                        <!-- ID Material disimpan hidden -->
+                                        <input type="hidden" name="output_id[]" value="<?= $hasil['id_material'] ?>">
+                                        <!-- Nama Material, hanya untuk tampilan -->
+                                        <input type="text" class="form-control" value="<?= $hasil['material_name'] ?>" readonly>
+                                        <!-- Qty Produced input -->
+                                        <input type="hidden" name="qty_produced[]" class="form-control" value="<?= $production['target_qty'] ?>">
+                                    <?php endforeach; ?>
+
                                 </div>
                             </div>
                         </div>

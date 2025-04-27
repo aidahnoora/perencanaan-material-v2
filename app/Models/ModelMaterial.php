@@ -50,6 +50,6 @@ class ModelMaterial extends Model
 
     public function Counts()
     {
-        return $this->db->table('materials')->countAllResults();
+        return $this->db->table('materials')->where('type !=', 'none')->countAllResults();
     }
 }

@@ -10,6 +10,7 @@ class ModelBom extends Model
     protected $primaryKey = 'id_bom';
     protected $allowedFields = [
         'product_id',
+        'material_hasil_id',
         'process_step_id',
         'bom_code',
         'bom_version',
@@ -20,7 +21,7 @@ class ModelBom extends Model
 
     public function AllData()
     {
-        $boms = $this->select('boms.*, products.product_name')
+        $boms = $this->select('boms.*, products.product_name, materials.material_name, materials.bom')
             ->join('products', 'products.id_product = boms.product_id')
             ->join('process_steps', 'process_steps.id_process_step = boms.process_step_id')
             ->orderBy('boms.id_bom', 'DESC')
@@ -57,8 +58,9 @@ class ModelBom extends Model
 
     public function getByStep($step_id)
     {
-        return $this->select('boms.*, products.product_name, process_steps.step_name')
+        return $this->select('boms.*, products.product_name, process_steps.step_name, materials.material_name')
             ->join('products', 'products.id_product = boms.product_id')
+            ->join('materials', 'materials.id_material = boms.material_hasil_id')
             ->join('process_steps', 'process_steps.id_process_step = boms.process_step_id')
             ->where('boms.process_step_id', $step_id)
             ->orderBy('boms.id_bom', 'DESC')
