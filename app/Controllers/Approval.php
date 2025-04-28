@@ -78,12 +78,18 @@ class Approval extends BaseController
                 ->getRow();
 
             if ($execution) {
+                // Cek apakah masih ada pending lain di production_execution_id yang sama
+                $pendingCount = $db->table('execution_stocks')
+                    ->where('production_execution_id', $row->production_execution_id)
+                    ->where('status', 'pending')
+                    ->countAllResults();
+
                 $order = $db->table('production_orders')
                     ->where('id_production_order', $execution->production_order_id)
                     ->get()
                     ->getRow();
 
-                if ($order) {
+                if ($order && $pendingCount == 0) {
                     // Update status_order ke 'completed'
                     $db->table('production_orders')
                         ->where('id_production_order', $execution->production_order_id)

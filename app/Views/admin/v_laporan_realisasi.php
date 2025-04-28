@@ -29,6 +29,7 @@
                         <tr class="text-center">
                             <th>No</th>
                             <th>Nama Produk</th>
+                            <th>Material Hasil</th>
                             <th>Tahap</th>
                             <th>No. Order</th>
                             <th>Tanggal Order</th>
@@ -44,6 +45,7 @@
                             <tr>
                                 <td><?= $no++ ?></td>
                                 <td><?= $item->product_name ?></td>
+                                <td><?= $item->name ?></td>
                                 <td class="text-center"><?= $item->process_step_id ?></td>
                                 <td><?= $item->order_number ?></td>
                                 <td class="text-center"><?= $item->planned_date_order ?></td>

@@ -48,7 +48,8 @@ class Laporan extends BaseController
                 execution_approvals.approved_qty, 
                 execution_approvals.rejected_qty, 
                 execution_stocks.final_qty, 
-                execution_stocks.`status`
+                execution_stocks.`status`,
+                execution_stocks.name
             FROM execution_approvals
             JOIN execution_stocks ON execution_stocks.id_execution_stock = execution_approvals.execution_stock_id
             JOIN production_executions ON production_executions.id_production_execution = execution_stocks.production_execution_id

@@ -30,6 +30,7 @@ class ModelEksekusiApproval extends Model
             ->join('production_orders', 'production_orders.id_production_order = production_executions.production_order_id', 'left')
             ->join('products', 'products.id_product = production_orders.product_id', 'left')
             ->where('execution_stocks.approved', true)
+            ->orderBy('id_execution_stock', 'desc')
             ->get()
             ->getResultArray();
     }
